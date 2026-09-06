@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>初中数学 · 蓝志东博士</title>
+    <style>
+        :root {
+            --ink: #1e2a44;
+            --blue: #2b6ed7;
+            --soft-bg: #f2f0f0;
+            --card-bg: #fcfcf9;
+            --line: #e2dfda;
+            --card-shadow: 0 8px 28px rgba(60, 50, 40, 0.08);
+            --radius: 16px;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+            color: var(--ink);
+            background: var(--soft-bg);
+            font-size: 120%;
+        }
+        .wrap {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 36px 24px 60px;
+        }
+        .hero {
+            padding: 32px 40px;
+            border-radius: var(--radius);
+            color: #fff;
+            background: linear-gradient(135deg, #4a6fa5, #8b7a9e);
+            box-shadow: 0 12px 36px rgba(60, 50, 40, 0.18);
+            text-align: center;
+        }
+        .hero h1 {
+            margin: 0;
+            font-size: clamp(36px, 4.4vw, 56px);
+            letter-spacing: 0.02em;
+        }
+        .hero h1 .icon {
+            font-size: 1.1em;
+        }
+        .hero p {
+            margin: 8px 0 0;
+            opacity: 0.92;
+            font-size: 1em;
+        }
+        .tools {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            margin: 28px 0 34px;
+            flex-wrap: wrap;
+        }
+        .tools input {
+            flex: 1;
+            min-width: 220px;
+            padding: 14px 22px;
+            border: 2px solid #d6d2cb;
+            border-radius: 12px;
+            font: inherit;
+            font-size: 1em;
+            background: #fefdfa;
+            transition: border 0.25s, box-shadow 0.25s;
+        }
+        .tools input:focus {
+            outline: none;
+            border-color: var(--blue);
+            box-shadow: 0 0 0 4px rgba(43, 110, 215, 0.12);
+        }
+        .tools input::placeholder {
+            color: #b0a89b;
+        }
+        .tools span {
+            color: #7a6f60;
+            font-size: 0.85em;
+            white-space: nowrap;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+        .book {
+            background: var(--card-bg);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.2s ease, box-shadow 0.25s ease;
+        }
+        .book:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 36px rgba(60, 50, 40, 0.12);
+        }
+        .book>button {
+            width: 100%;
+            border: 0;
+            background: #f6f4f0;
+            padding: 18px 24px;
+            text-align: left;
+            font: inherit;
+            color: var(--ink);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .book>button .book-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.6em;
+            letter-spacing: 0.01em;
+        }
+        .book>button .book-label .icon {
+            font-size: 1.2em;
+            line-height: 1;
+        }
+        .book>button small {
+            font-weight: 500;
+            color: #8f8372;
+            font-size: 0.65em;
+        }
+        .chapters {
+            padding: 8px 18px 18px;
+        }
+        .chapter {
+            border-bottom: 1px solid #ece8e2;
+        }
+        .chapter:last-child {
+            border: 0;
+        }
+        .chapter summary {
+            padding: 16px 12px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.15em;
+            color: var(--ink);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .chapter summary::marker {
+            color: var(--blue);
+        }
+        .chapter summary .ch-icon {
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+        .chapter ul {
+            margin: 0 0 12px;
+            padding: 0 0 0 32px;
+            list-style: none;
+        }
+        .chapter li {
+            padding: 5px 0;
+            color: #4d4438;
+            font-size: 0.92em;
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+        }
+        .chapter li::before {
+            content: "—";
+            color: #c5bcae;
+            font-weight: 300;
+            font-size: 0.85em;
+        }
+        .chapter li a {
+            color: var(--blue);
+            text-decoration: none;
+            border-bottom: 1px dashed transparent;
+            transition: border-color 0.2s, color 0.15s;
+            cursor: pointer;
+        }
+        .chapter li a:hover {
+            border-bottom-color: var(--blue);
+            color: #1a4fa8;
+        }
+        .hidden {
+            display: none;
+        }
+        .highlight {
+            background: #e8e0d6;
+            border-radius: 4px;
+            padding: 0 6px;
+            transition: background 0.3s;
+        }
+        @media (max-width: 820px) {
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .wrap {
+                padding: 24px 16px 40px;
+            }
+            .hero {
+                padding: 24px 20px;
+            }
+            .book>button .book-label {
+                font-size: 1.4em;
+            }
+            body {
+                font-size: 110%;
+            }
+        }
+        @media (max-width: 480px) {
+            .tools {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .book>button .book-label {
+                font-size: 1.2em;
+            }
+            .chapter summary {
+                font-size: 1em;
+            }
+            .chapter ul {
+                padding-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="wrap">
+        <header class="hero">
+            <h1><span class="icon">📐</span> 初中数学 · 蓝志东博士</h1>
+            <p>董教总统一课程 · 初一至初三 · 38 章互动目录</p>
+        </header>
+        <div class="tools">
+            <input id="q" placeholder="搜索章节或小节，例如：因式分解、圆、方程式">
+            <span id="count"></span>
+        </div>
+        <section id="grid" class="grid"></section>
+    </main>
+    <script>
+        const books = [
+            ['初一上册', [
+                ['1. 完整数', [
+                    '1.1 完整数与自然数的概念',
+                    '1.2 完整数的四则运算',
+                    '1.3 四则运算三大定律',
+                    '1.4 应用问题'
+                ]],
+                ['2. 自然数的性质', [
+                    '2.1 奇数与偶数',
+                    '2.2 因数与倍数',
+                    '2.3 质数与合数',
+                    '2.4 质因数',
+                    '2.5 公因数与最大公因数',
+                    '2.6 公倍数与最小公倍数',
+                    '2.7 最大公因数与最小公倍数的应用问题',
+                    '2.8 自然数的可除性'
+                ]],
+                ['3. 整数', [
+                    '3.1 正整数与负整数',
+                    '3.2 整数的四则运算',
+                    '3.3 整数的混合运算',
+                    '3.4 相反数与绝对值',
+                    '3.5 数列'
+                ]],
+                ['4. 分数', [
+                    '4.1 分数的概念与基本性质',
+                    '4.2 分数的比较',
+                    '4.3 分数的种类',
+                    '4.4 分数的加减法',
+                    '4.5 分数的乘除法',
+                    '4.6 分数的混合运算',
+                    '4.7 繁分数',
+                    '4.8 应用问题'
+                ]],
+                ['5. 小数', [
+                    '5.1 小数的概念',
+                    '5.2 小数的四则运算',
+                    '5.3 循环小数',
+                    '5.4 近似值',
+                    '5.5 小数的应用问题'
+                ]],
+                ['6. 度量衡', [
+                    '6.1 长度单位',
+                    '6.2 质量单位',
+                    '6.3 容量单位',
+                    '6.4 时间单位'
+                ]],
+                ['7. 百分法', [
+                    '7.1 百分数的概念',
+                    '7.2 应用问题'
+                ]]
+            ]],
+            ['初一下册', [
+                ['8. 记数制度', [
+                    '8.1 十进制',
+                    '8.2 二进制',
+                    '8.3 二进数的运算',
+                    '8.4 八进制'
+                ]],
+                ['9. 代数式', [
+                    '9.1 代数式',
+                    '9.2 代数式的值',
+                    '9.3 代数式的加、减法',
+                    '9.4 代数式与数的乘、除法',
+                    '9.5 代数式的混合运算',
+                    '9.6 等式与不等式的概念'
+                ]],
+                ['10. 一元一次方程式', [
+                    '10.1 一元一次方程式',
+                    '10.2 一元一次方程式的应用问题'
+                ]],
+                ['11. 比与比例', [
+                    '11.1 比与比例的概念及其性质',
+                    '11.2 比例分配',
+                    '11.3 正比例与反比例'
+                ]],
+                ['12. 几何的基本概念', [
+                    '12.1 平面图形与立体图形',
+                    '12.2 平面图形的线对称与点对称',
+                    '12.3 角及其测量',
+                    '12.4 角的分类',
+                    '12.5 相交线、平行线及垂线',
+                    '12.6 与相交线有关的角',
+                    '12.7 与平行线有关的角及其性质',
+                    '12.8 平行线的判定'
+                ]],
+                ['13. 二元一次方程组', [
+                    '13.1 二元一次方程组',
+                    '13.2 代入消元法',
+                    '13.3 加减消元法',
+                    '13.4 应用问题'
+                ]],
+                ['14. 直角坐标系与图解', [
+                    '14.1 直角坐标系',
+                    '14.2 二元一次方程式与直线',
+                    '14.3 二元一次方程组的图解法'
+                ]]
+            ]],
+            ['初二上册', [
+                ['1. 多项式', [
+                    '1.1 多项式',
+                    '1.2 多项式的四则运算',
+                    '1.3 乘法公式'
+                ]],
+                ['2. 因式分解', [
+                    '2.1 因式分解（抽取公因式法、应用公式法、交叉相乘法、分组分解法）',
+                    '2.2 最高公因式与最低公倍式'
+                ]],
+                ['3. 平方根与立方根', [
+                    '3.1 平方根与算术平方根及其性质',
+                    '3.2 数的立方根',
+                    '3.3 有理数与无理数',
+                    '3.4 二次根式的化简',
+                    '3.5 二次根式的四则运算'
+                ]],
+                ['4. 三角形', [
+                    '4.1 三角形',
+                    '4.2 三角形的内角与外角',
+                    '4.3 全等三角形',
+                    '4.4 等腰三角形及等边三角形',
+                    '4.5 直角三角形'
+                ]],
+                ['5. 四边形与多边形', [
+                    '5.1 四边形',
+                    '5.2 平行四边形',
+                    '5.3 长方形',
+                    '5.4 菱形',
+                    '5.5 正方形',
+                    '5.6 风筝形',
+                    '5.7 梯形',
+                    '5.8 四边形之间的关系',
+                    '5.9 多边形'
+                ]],
+                ['6. 周长与面积', [
+                    '6.1 周长',
+                    '6.2 面积（正方形、长方形、三角形、平行四边形、菱形与风筝形、梯形）',
+                    '6.3 面积单位的换算'
+                ]]
+            ]],
+            ['初二下册', [
+                ['7. 圆与扇形', [
+                    '7.1 圆（圆的周长与面积）',
+                    '7.2 弧长与扇形面积'
+                ]],
+                ['8. 毕氏定理', [
+                    '8.1 毕氏定理',
+                    '8.2 毕氏定理的逆定理',
+                    '8.3 距离公式'
+                ]],
+                ['9. 集合论', [
+                    '9.1 集合与元素',
+                    '9.2 有限集与基数',
+                    '9.3 集合间的关系及运算（等集、子集、相离集、联集、交集、差集）',
+                    '9.4 泛集与余集'
+                ]],
+                ['10. 集合论的应用', [
+                    '10.1 两个集合联集的基数公式及其应用',
+                    '10.2 余集的基数公式及其应用',
+                    '10.3 三个集合联集的基数公式及其应用'
+                ]],
+                ['11. 一元二次方程式与一元二次函数', [
+                    '11.1 一元二次方程式（因式分解法、配方法、公式法）',
+                    '11.2 应用问题',
+                    '11.3 一元二次函数的图像'
+                ]],
+                ['12. 分式', [
+                    '12.1 分式的概念与基本性质',
+                    '12.2 分式的四则运算',
+                    '12.3 繁分式',
+                    '12.4 分式方程式',
+                    '12.5 应用问题'
+                ]],
+                ['13. 公式', [
+                    '13.1 公式',
+                    '13.2 公式主项的更换'
+                ]],
+                ['14. 不等式', [
+                    '14.1 不等式的基本性质',
+                    '14.2 一元一次不等式',
+                    '14.3 一元一次不等式组',
+                    '14.4 应用问题'
+                ]]
+            ]],
+            ['初三上册', [
+                ['1. 变数法', [
+                    '1.1 正变',
+                    '1.2 反变',
+                    '1.3 联变'
+                ]],
+                ['2. 指数与对数', [
+                    '2.1 零指数幂与负整数指数幂',
+                    '2.2 分数指数幂',
+                    '2.3 简易指数方程式',
+                    '2.4 对数的定义与性质'
+                ]],
+                ['3. 统计表与统计图', [
+                    '3.1 统计学的基本概念',
+                    '3.2 频数分配表',
+                    '3.3 统计图（象形图、条形图、圆形图、线形图、茎叶图、直方图与频数多边形）',
+                    '3.4 累积频数分配表与累积频数多边形'
+                ]],
+                ['4. 集中趋势与四分位数', [
+                    '4.1 集中趋势（平均数、中位数、众数）',
+                    '4.2 四分位数'
+                ]],
+                ['5. 相似形', [
+                    '5.1 相似形',
+                    '5.2 相似三角形的判定与应用',
+                    '5.3 相似形的面积比'
+                ]],
+                ['6. 立体图形、表面积与体积', [
+                    '6.1 立体图形与表面积、体积的基本概念',
+                    '6.2 立方体、长方体（表面积、体积及单位换算）',
+                    '6.3 平面展开图',
+                    '6.4 棱柱（体积与表面积）',
+                    '6.5 直圆柱（体积与表面积）',
+                    '6.6 棱锥（体积与表面积）',
+                    '6.7 直圆锥（体积与表面积）',
+                    '6.8 球（体积与表面积）'
+                ]]
+            ]],
+            ['初三下册', [
+                ['7. 三角函数', [
+                    '7.1 锐角的三角函数',
+                    '7.2 特别角的三角函数值',
+                    '7.3 已知一个三角函数值，求其它三角函数值',
+                    '7.4 三角函数的应用'
+                ]],
+                ['8. 圆', [
+                    '8.1 圆心角',
+                    '8.2 圆周角',
+                    '8.3 垂径定理',
+                    '8.4 圆内接四边形',
+                    '8.5 直线与圆的关系',
+                    '8.6 弦切角'
+                ]],
+                ['9. 轨迹与几何作图', [
+                    '9.1 轨迹',
+                    '9.2 圆的作图',
+                    '9.3 垂线的作图',
+                    '9.4 角及角平分线的作图',
+                    '9.5 三角形的作图',
+                    '9.6 平行线的作图',
+                    '9.7 三角形的外接圆与内切圆的作图',
+                    '9.8 正多边形的作图'
+                ]],
+                ['10. 几何变换', [
+                    '10.1 反射',
+                    '10.2 平移',
+                    '10.3 旋转',
+                    '10.4 放大'
+                ]]
+            ]]
+        ];
+
+        const sectionMap = new Map();
+        books.forEach(([bookName, chapters]) => {
+            chapters.forEach(([chapterTitle, sections]) => {
+                sections.forEach(s => {
+                    sectionMap.set(s, { bookName, chapterTitle, section: s });
+                });
+            });
+        });
+
+        const grid = document.querySelector('#grid'),
+            q = document.querySelector('#q'),
+            count = document.querySelector('#count');
+
+        function jumpToSection(sectionName) {
+            const info = sectionMap.get(sectionName);
+            if (!info) { alert('未找到：' + sectionName); return; }
+            const allBooks = document.querySelectorAll('.book');
+            let targetBook = null, targetSummary = null;
+            allBooks.forEach(book => {
+                const btn = book.querySelector('button .book-label');
+                if (btn && btn.textContent.trim() === info.bookName) {
+                    targetBook = book;
+                }
+            });
+            if (!targetBook) { alert('未找到对应的册'); return; }
+            const container = targetBook.querySelector('.chapters');
+            if (container) container.classList.remove('hidden');
+            const summaries = targetBook.querySelectorAll('.chapter summary');
+            summaries.forEach(sum => {
+                if (sum.textContent.trim() === info.chapterTitle) {
+                    targetSummary = sum;
+                }
+            });
+            if (!targetSummary) { alert('未找到对应的章'); return; }
+            const details = targetSummary.closest('details');
+            if (details) details.open = true;
+            targetSummary.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const lis = targetSummary.closest('details').querySelectorAll('li');
+            lis.forEach(li => {
+                const a = li.querySelector('a');
+                if (a && a.textContent.trim() === sectionName) {
+                    li.classList.add('highlight');
+                    setTimeout(() => li.classList.remove('highlight'), 2000);
+                }
+            });
+        }
+
+        function render() {
+            let key = q.value.trim().toLowerCase(), shown = 0;
+            grid.innerHTML = books.map(([name, chs]) => {
+                let visible = chs.filter(c => !key || (c[0] + ' ' + c[1].join(' ')).toLowerCase().includes(key));
+                if (!visible.length) return '';
+                shown += visible.length;
+                return `<article class="book"><button onclick="this.nextElementSibling.classList.toggle('hidden')"><span class="book-label"><span class="icon">📘</span>${name}</span><small>${visible.length} 章</small></button><div class="chapters">${visible.map(([t, ss]) => `<details class="chapter"><summary><span class="ch-icon">📖</span>${t}</summary><ul>${ss.map(s => `<li><a onclick="jumpToSection('${s.replace(/'/g, "\\'")}')">${s}</a></li>`).join('')}</ul></details>`).join('')}</div></article>`
+            }).join('');
+            count.textContent = `显示 ${shown} 个章节`;
+        }
+        q.addEventListener('input', render);
+        render();
+        window.jumpToSection = jumpToSection;
+    </script>
+</body>
+</html>
