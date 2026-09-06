@@ -550,7 +550,16 @@
                 let visible = chs.filter(c => !key || (c[0] + ' ' + c[1].join(' ')).toLowerCase().includes(key));
                 if (!visible.length) return '';
                 shown += visible.length;
-                return `<article class="book"><button onclick="this.nextElementSibling.classList.toggle('hidden')"><span class="book-label"><span class="icon">📘</span>${name}</span><small>${visible.length} 章</small></button><div class="chapters">${visible.map(([t, ss]) => `<details class="chapter"><summary><span class="ch-icon">📖</span>${t}</summary><ul>${ss.map(s => `<li><a onclick="jumpToSection('${s.replace(/'/g, "\\'")}')">${s}</a></li>`).join('')}</ul></details>`).join('')}</div></article>`
+                return `<article class="book"><button onclick="this.nextElementSibling.classList.toggle('hidden')"><span class="book-label"><span class="icon">📘</span>${name}</span><small>${visible.length} 章</small></button><div class="chapters">${visible.map(([t, ss]) => `<details class="chapter"><summary><span class="ch-icon">📖</span>${t}</summary><ul>${ss.map(s => {
+const links={
+'10.1 一元一次方程式':'chapter10/10.1_一元一次方程式.html',
+'10.2 一元一次方程式的应用问题':'chapter10/10.2_一元一次方程式的应用问题.html',
+'11.1 比与比例的概念及其性质':'chapter11/11.1_比与比例的概念及其性质.html',
+'11.2 比例分配':'chapter11/11.2_比例分配.html',
+'11.3 正比例与反比例':'chapter11/11.3_正比例与反比例.html'
+};
+return links[s] ? `<li><a href="${links[s]}">${s}</a></li>` : `<li><a onclick="jumpToSection('${s.replace(/'/g, "\\'")}')">${s}</a></li>`;
+}).join('')}</ul></details>`).join('')}</div></article>`
             }).join('');
             count.textContent = `显示 ${shown} 个章节`;
         }
