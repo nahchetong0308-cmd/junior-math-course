@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10.2 一元一次方程式的应用问题｜基础版</title>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<style>
+:root{
+  --bg:#f5f7fb; --card:#fff; --text:#1f2937; --muted:#5f6b7a;
+  --line:#dfe5ee; --accent:#2457a6; --soft:#eef4ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:"Noto Sans SC","Microsoft YaHei",Arial,sans-serif;line-height:1.75;
+}
+header{background:#fff;border-bottom:1px solid var(--line);padding:30px 20px 24px}
+header .wrap,main{max-width:920px;margin:auto}
+h1{margin:0;font-size:clamp(28px,5vw,42px);line-height:1.25}
+.subtitle{margin-top:8px;color:var(--muted)}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+nav .wrap{max-width:920px;margin:auto;padding:8px 12px;display:flex;flex-wrap:wrap;gap:8px}
+nav a{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;color:var(--accent);background:var(--soft);border:1px solid #b9c9e4;border-radius:9px;text-decoration:none;font-size:14px;font-weight:700;min-height:40px}
+nav a:hover{background:#e1ebfb;border-color:var(--accent)}
+main{padding:22px 16px 56px}
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px}
+h2{font-size:23px;margin:0 0 14px;color:#173f78}
+h3{font-size:18px;margin:22px 0 8px}
+p{margin:8px 0}
+.key{margin:14px 0;padding:12px 15px;border-left:4px solid var(--accent);background:var(--soft);border-radius:8px;font-weight:700}
+.formula{text-align:center;margin:15px 0}
+.quiz-item{padding:11px 0;border-bottom:1px dashed var(--line);font-weight:600}
+.quiz-item:last-child{border-bottom:0}
+.answer{padding:13px 15px;background:#f8fafc;border-radius:9px;margin:8px 0 14px}
+.summary{text-align:center;font-size:20px;font-weight:800;padding:18px;background:var(--soft);border-radius:10px}
+.detail-link{display:block;text-align:center;margin-top:24px;padding:14px 18px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:800}
+.detail-link:hover{filter:brightness(.94)}
+.note{font-size:14px;color:var(--muted)}
+.steps{margin:10px 0;padding-left:22px}
+.steps li{margin:10px 0}
+@media(max-width:600px){
+ section{padding:17px;border-radius:10px} h2{font-size:21px}
+ .quiz-item{font-size:15px} nav a{flex:1 1 calc(50% - 8px);font-size:13px;padding:9px 8px}
+}
+@media print{nav{display:none}body{background:white}section{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>10.2 一元一次方程式的应用问题</h1>
+<div class="subtitle">基础版｜认识问题 → 理解作用 → 掌握方法 → 快速自测 → 考试应用</div>
+</div></header>
+
+<nav><div class="wrap">
+<a href="#s1">1. 是什么？</a><a href="#s2">2. 有什么作用？</a><a href="#s3">3. 怎么做？</a>
+<a href="#s4">4. 快速自测</a><a href="#s5">5. 考试常考</a><a href="#s6">6. 一句话总结</a><a href="#s7">7. 答案与解析</a>
+</div></nav>
+
+<main>
+<section id="s1">
+<h2>1. 是什么？</h2>
+<p><strong>一元一次方程式的应用问题</strong>，就是把实际问题中的数量关系，用一元一次方程式表示出来，再通过解方程求出未知量。</p>
+<p>例如：</p>
+<p>一个长方形的长比宽多 \(2\) cm，周长是 \(44\) cm。</p>
+<p>设宽为 \(x\) cm，那么长为：</p>
+<div class="formula">\[x+2\]</div>
+<p>根据周长关系：</p>
+<div class="formula">\[2x+2(x+2)=44\]</div>
+<div class="key">简单理解：把题目中的数量关系“翻译”成方程。</div>
+</section>
+
+<section id="s2">
+<h2>2. 有什么作用？</h2>
+<p>有些实际问题不能直接一步算出答案，但题目中存在可以利用的<strong>等量关系</strong>。</p>
+<p>找到等量关系，就可以：</p>
+<div class="formula">\[\boxed{\text{实际问题}\rightarrow\text{列方程}\rightarrow\text{解方程}\rightarrow\text{得到答案}}\]</div>
+<p>例如：</p>
+<div class="formula">\[2x+2(x+2)=44\]</div>
+<p>解得：</p>
+<div class="formula">\[x=10\]</div>
+<p>所以长方形的宽是 \(10\) cm，长是 \(12\) cm。</p>
+<div class="key">方程可以把实际问题中的数量关系，转化成可以计算的问题。</div>
+</section>
+
+<section id="s3">
+<h2>3. 怎么做？</h2>
+<p>解决一元一次方程式应用问题，关键是：</p>
+<div class="formula">\[\boxed{\text{找出等量关系}}\]</div>
+<p>通常按下面的方法进行：</p>
+<ol class="steps">
+<li><strong>设未知数</strong><br>把要求的量或便于表示其他数量的量设为 \(x\)。</li>
+<li><strong>表示其他数量</strong><br>根据题目的条件，用含 \(x\) 的式子表示其他数量。</li>
+<li><strong>找等量关系</strong><br>找出题目中两个相等的数量。</li>
+<li><strong>列方程</strong><br>根据等量关系列出一元一次方程式。</li>
+<li><strong>解方程</strong><br>求出未知数的值。</li>
+<li><strong>作答</strong><br>检查结果是否符合题意，再写出答案。</li>
+</ol>
+<div class="key">记忆：设未知数 → 表示数量 → 找等量关系 → 列方程 → 解方程 → 作答。</div>
+</section>
+
+<section id="s4">
+<h2>4. 快速自测</h2>
+<p class="note">先独立判断，答案与解析统一放在第7项。</p>
+<div class="quiz-item">1. 列方程解决应用问题时，找到等量关系是关键。（　　）</div>
+<div class="quiz-item">2. 设一个数为 \(x\)，它的5倍加13可以表示为 \(5x+13\)。（　　）</div>
+<div class="quiz-item">3. 两个连续偶数，如果较小的数为 \(x\)，较大的数可以表示为 \(x+1\)。（　　）</div>
+<div class="quiz-item">4. 父亲今年40岁，儿子今年12岁，\(x\) 年后两人的年龄分别为 \(40+x\) 和 \(12+x\)。（　　）</div>
+<div class="quiz-item">5. 解出方程后，只要计算正确，就不需要检查答案是否符合题意。（　　）</div>
+</section>
+
+<section id="s5">
+<h2>5. 考试常考</h2>
+
+<h3>题型1：数的关系问题</h3>
+<p><strong>题目：</strong></p>
+<p>两个连续偶数的和是62，求这两个偶数。</p>
+<div class="answer"><strong>答案：</strong> \(\boxed{30,\ 32}\)</div>
+
+<h3>题型2：年龄问题</h3>
+<p><strong>题目：</strong></p>
+<p>父亲今年40岁，儿子今年12岁。多少年后，父亲的年龄是儿子的2倍？</p>
+<div class="answer"><strong>答案：</strong> \(\boxed{16\text{年后}}\)</div>
+
+<h3>题型3：平均数问题</h3>
+<p><strong>题目：</strong></p>
+<p>某班有42名学生。及格学生的平均成绩为68分，不及格学生的平均成绩为38分，全班平均成绩为58分。求及格学生人数。</p>
+<div class="answer"><strong>答案：</strong> \(\boxed{28\text{人}}\)</div>
+
+<h3>题型4：行程问题</h3>
+<p><strong>题目：</strong></p>
+<p>小明骑自行车从家到学校再返回，共用1小时。去时速度为每小时15 km，返回速度为每小时10 km。求家到学校的距离。</p>
+<div class="answer"><strong>答案：</strong> \(\boxed{6\text{ km}}\)</div>
+
+<a class="detail-link" href="10.2_一元一次方程式的应用问题_常考题详细解题步骤.html">查看以上常考题的详细解题步骤 →</a>
+</section>
+
+<section id="s6">
+<h2>6. 一句话总结</h2>
+<div class="summary">表示数量，找出等量关系，列出方程，再解方程并根据题意作答。</div>
+</section>
+
+<section id="s7">
+<h2>7. 快速自测答案与解析</h2>
+
+<h3>1. 列方程解决应用问题时，找到等量关系是关键。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：等量关系是列出方程的依据。</div>
+
+<h3>2. 设一个数为 \(x\)，它的5倍加13可以表示为 \(5x+13\)。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：5倍是 \(5x\)，再加13就是 \(5x+13\)。</div>
+
+<h3>3. 两个连续偶数，如果较小的数为 \(x\)，较大的数可以表示为 \(x+1\)。（　　）</h3>
+<div class="answer"><strong>答案：错误</strong><br>解析：连续偶数相差2，应表示为 \(x\) 和 \(x+2\)。</div>
+
+<h3>4. 父亲今年40岁，儿子今年12岁，\(x\) 年后两人的年龄分别为 \(40+x\) 和 \(12+x\)。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：经过相同的 \(x\) 年，两人的年龄都增加 \(x\)。</div>
+
+<h3>5. 解出方程后，只要计算正确，就不需要检查答案是否符合题意。（　　）</h3>
+<div class="answer"><strong>答案：错误</strong><br>解析：应用问题的答案还必须符合题目的实际意义。</div>
+</section>
+</main>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10.1 一元一次方程式｜基础版</title>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<style>
+:root{
+  --bg:#f5f7fb; --card:#fff; --text:#1f2937; --muted:#5f6b7a;
+  --line:#dfe5ee; --accent:#2457a6; --soft:#eef4ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:"Noto Sans SC","Microsoft YaHei",Arial,sans-serif;line-height:1.75;
+}
+header{background:#fff;border-bottom:1px solid var(--line);padding:30px 20px 24px}
+header .wrap,main{max-width:920px;margin:auto}
+h1{margin:0;font-size:clamp(28px,5vw,42px);line-height:1.25}
+.subtitle{margin-top:8px;color:var(--muted)}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+nav .wrap{max-width:920px;margin:auto;padding:8px 12px;display:flex;flex-wrap:wrap;gap:8px}
+nav a{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;color:var(--accent);background:var(--soft);border:1px solid #b9c9e4;border-radius:9px;text-decoration:none;font-size:14px;font-weight:700;min-height:40px}
+nav a:hover{background:#e1ebfb;border-color:var(--accent)}
+main{padding:22px 16px 56px}
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px}
+h2{font-size:23px;margin:0 0 14px;color:#173f78}
+h3{font-size:18px;margin:22px 0 8px}
+p{margin:8px 0}
+.key{margin:14px 0;padding:12px 15px;border-left:4px solid var(--accent);background:var(--soft);border-radius:8px;font-weight:700}
+.formula{text-align:center;margin:15px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0}
+th,td{border:1px solid var(--line);padding:9px;text-align:center}
+th{background:#f2f5f9}
+.quiz-item{padding:11px 0;border-bottom:1px dashed var(--line);font-weight:600}
+.quiz-item:last-child{border-bottom:0}
+.answer{padding:13px 15px;background:#f8fafc;border-radius:9px;margin:8px 0 14px}
+.summary{text-align:center;font-size:20px;font-weight:800;padding:18px;background:var(--soft);border-radius:10px}
+.detail-link{display:block;text-align:center;margin-top:24px;padding:14px 18px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:800}
+.detail-link:hover{filter:brightness(.94)}
+.note{font-size:14px;color:var(--muted)}
+@media(max-width:600px){
+ section{padding:17px;border-radius:10px} h2{font-size:21px}
+ .quiz-item{font-size:15px} nav a{flex:1 1 calc(50% - 8px);font-size:13px;padding:9px 8px}
+}
+@media print{nav{display:none}body{background:white}section{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>10.1 一元一次方程式</h1>
+<div class="subtitle">基础版｜认识概念 → 理解作用 → 掌握解法 → 快速自测 → 考试应用</div>
+</div></header>
+
+<nav><div class="wrap">
+<a href="#s1">1. 是什么？</a><a href="#s2">2. 有什么作用？</a><a href="#s3">3. 怎么算？</a>
+<a href="#s4">4. 快速自测</a><a href="#s5">5. 考试常考</a><a href="#s6">6. 一句话总结</a><a href="#s7">7. 答案与解析</a>
+</div></nav>
+
+<main>
+<section id="s1">
+<h2>1. 是什么？</h2>
+<p><strong>方程式</strong>是含有未知数的等式。</p>
+<div class="formula">\[2x-6=8\]</div>
+<p>只含有<strong>一个未知数</strong>，而且未知数的<strong>次数是1</strong>的方程式，叫做<strong>一元一次方程式</strong>。</p>
+<div class="formula">\[x+5=12,\qquad 4x=3x-8\]</div>
+<p>都是一元一次方程式。</p>
+<p>能使方程左右两边相等的未知数的值，叫做方程式的<strong>解（或根）</strong>。</p>
+<p>例如：</p><div class="formula">\[2x-6=8\]</div>
+<p>当 \(x=7\) 时：</p><div class="formula">\[2\times7-6=8\]</div>
+<p>左右两边相等，所以 \(x=7\) 是这个方程的解。</p>
+<div class="key">简单理解：解方程，就是找出使等号左右两边相等的未知数。</div>
+</section>
+
+<section id="s2">
+<h2>2. 有什么作用？</h2>
+<p>一元一次方程式可以帮助我们根据已知的数量关系，<strong>求出未知数的值</strong>。</p>
+<p>例如：</p><div class="formula">\[x+6=15\]</div>
+<p>要求 \(x\)，就要想办法把 \(x\) 单独留下：</p>
+<div class="formula">\[x=15-6=9\]</div>
+<p>检验：</p><div class="formula">\[9+6=15\]</div>
+<p>所以：</p><div class="formula">\[\boxed{x=9}\]</div>
+<div class="key">解方程的目标：把方程一步步变形，最终得到 \(x=\text{某个数}\)。</div>
+</section>
+
+<section id="s3">
+<h2>3. 怎么算？</h2>
+<p>解方程的依据是：</p>
+<ul>
+<li>方程两边同时加上或减去同一个数，解不变；</li>
+<li>方程两边同时乘以或除以同一个<strong>非零数</strong>，解不变。</li>
+</ul>
+<p>例如：</p><div class="formula">\[3x+5=17\]</div>
+<p>移项：</p><div class="formula">\[3x=17-5\]</div>
+<p>合并：</p><div class="formula">\[3x=12\]</div>
+<p>未知数的系数化为1：</p><div class="formula">\[\boxed{x=4}\]</div>
+<p>遇到不同结构的方程，要先观察，再选择方法：</p>
+<table><thead><tr><th>看到的结构</th><th>处理方法</th></tr></thead><tbody>
+<tr><td>有括号</td><td>去括号</td></tr>
+<tr><td>有分母</td><td>去分母</td></tr>
+<tr><td>两边都有未知项</td><td>把未知项集中到一边</td></tr>
+<tr><td>有多个同类项</td><td>合并同类项</td></tr>
+<tr><td>\(ax=b\)</td><td>把未知数的系数化为1</td></tr>
+</tbody></table>
+<p><strong>没有的步骤不必做。</strong></p>
+<p>如果最后得到：</p><div class="formula">\[0x=0\]</div>
+<p>则<strong>任意数都是原方程的解</strong>。</p>
+<p>如果最后得到：</p><div class="formula">\[0x=5\]</div>
+<p>则原方程<strong>无解</strong>。</p>
+<div class="key">记忆：先看结构，再选方法，最后把未知数单独留下。</div>
+</section>
+
+<section id="s4">
+<h2>4. 快速自测</h2>
+<p class="note">先独立判断，答案与解析统一放在第7项。</p>
+<div class="quiz-item">1. \(3x+5=11\) 是一元一次方程式。（　　）</div>
+<div class="quiz-item">2. \(x=2\) 是方程 \(3x+1=7\) 的解。（　　）</div>
+<div class="quiz-item">3. 方程两边同时除以0，方程的解不变。（　　）</div>
+<div class="quiz-item">4. 解一元一次方程式时，每一道题都必须先去分母。（　　）</div>
+<div class="quiz-item">5. 方程化简后得到 \(0x=6\)，说明原方程无解。（　　）</div>
+</section>
+
+<section id="s5">
+<h2>5. 考试常考</h2>
+<h3>题型1：解基本一元一次方程式</h3>
+<p>题目：</p><div class="formula">\[5x+7=2x+19\]</div>
+<div class="answer"><strong>答案：</strong> \(\boxed{x=4}\)</div>
+
+<h3>题型2：解含括号或分数的一元一次方程式</h3>
+<p>题目：</p><div class="formula">\[\frac{x+1}{3}=\frac{2x-3}{7}\]</div>
+<div class="answer"><strong>答案：</strong> \(\boxed{x=16}\)</div>
+
+<h3>题型3：判断方程解的特殊情况</h3>
+<p>题目：</p><div class="formula">\[3(x-4)=3x-12\]</div>
+<div class="answer"><strong>答案：</strong>任意数都是原方程的解。</div>
+
+<a class="detail-link" href="10.1_一元一次方程式_常考题详细解题步骤.html">查看以上常考题的详细解题步骤 →</a>
+</section>
+
+<section id="s6">
+<h2>6. 一句话总结</h2>
+<div class="summary">先看方程结构，再选合适的方法，逐步把未知数单独留下。</div>
+</section>
+
+<section id="s7">
+<h2>7. 快速自测答案与解析</h2>
+<h3>1. \(3x+5=11\) 是一元一次方程式。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：只有一个未知数 \(x\)，且未知数的次数是1。</div>
+<h3>2. \(x=2\) 是方程 \(3x+1=7\) 的解。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：\(3\times2+1=7\)，左右两边相等。</div>
+<h3>3. 方程两边同时除以0，方程的解不变。（　　）</h3>
+<div class="answer"><strong>答案：错误</strong><br>解析：除数不能为0。</div>
+<h3>4. 解一元一次方程式时，每一道题都必须先去分母。（　　）</h3>
+<div class="answer"><strong>答案：错误</strong><br>解析：没有分母时不需要去分母，要根据方程的结构选择方法。</div>
+<h3>5. 方程化简后得到 \(0x=6\)，说明原方程无解。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：\(0x\) 恒等于0，不可能等于6。</div>
+</section>
+</main>
+</body>
+</html>

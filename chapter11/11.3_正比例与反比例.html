@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>11.3 正比例与反比例｜基础版</title>
+<script>
+window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#1f2937;--muted:#5f6b7a;--line:#dfe5ee;--accent:#2457a6;--soft:#eef4ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans SC","Microsoft YaHei",Arial,sans-serif;line-height:1.75}
+header{background:#fff;border-bottom:1px solid var(--line);padding:30px 20px 24px}
+header .wrap,main{max-width:920px;margin:auto}
+h1{margin:0;font-size:clamp(28px,5vw,42px);line-height:1.25}.subtitle{margin-top:8px;color:var(--muted)}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+nav .wrap{max-width:920px;margin:auto;padding:8px 12px;display:flex;flex-wrap:wrap;gap:8px}
+nav a{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;color:var(--accent);background:var(--soft);border:1px solid #b9c9e4;border-radius:9px;text-decoration:none;font-size:14px;font-weight:700;min-height:40px}
+nav a:hover{background:#e1ebfb;border-color:var(--accent)}
+main{padding:22px 16px 56px}section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px}
+h2{font-size:23px;margin:0 0 14px;color:#173f78}h3{font-size:18px;margin:22px 0 8px}p{margin:8px 0}
+.key{margin:14px 0;padding:12px 15px;border-left:4px solid var(--accent);background:var(--soft);border-radius:8px;font-weight:700}
+.formula{text-align:center;margin:15px 0}.quiz-item{padding:11px 0;border-bottom:1px dashed var(--line);font-weight:600}.quiz-item:last-child{border-bottom:0}
+.answer{padding:13px 15px;background:#f8fafc;border-radius:9px;margin:8px 0 14px}
+.summary{text-align:center;font-size:20px;font-weight:800;padding:18px;background:var(--soft);border-radius:10px}
+.detail-link{display:block;text-align:center;margin-top:24px;padding:14px 18px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800}
+.detail-link:hover{filter:brightness(.94)}.note{font-size:14px;color:var(--muted)}
+table{width:100%;max-width:520px;margin:14px auto;border-collapse:collapse;text-align:center}
+th,td{border:1px solid var(--line);padding:9px 12px}th{background:var(--soft)}
+@media(max-width:600px){section{padding:17px;border-radius:10px}h2{font-size:21px}.quiz-item{font-size:15px}nav a{flex:1 1 calc(50% - 8px);font-size:13px;padding:9px 8px}}
+@media print{nav{display:none}body{background:#fff}section{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>11.3 正比例与反比例</h1>
+<div class="subtitle">基础版｜认识概念 → 理解作用 → 掌握判断与计算 → 快速自测 → 考试应用</div>
+</div></header>
+
+<nav><div class="wrap">
+<a href="#s1">1. 是什么？</a><a href="#s2">2. 有什么作用？</a><a href="#s3">3. 怎么判断、怎么算？</a>
+<a href="#s4">4. 快速自测</a><a href="#s5">5. 考试常考</a><a href="#s6">6. 一句话总结</a><a href="#s7">7. 答案与解析</a>
+</div></nav>
+
+<main>
+<section id="s1">
+<h2>1. 是什么？</h2>
+<p>当两个数量一起变化时，可以观察它们之间的关系。</p>
+<h3>正比例</h3>
+<p>如果两个数量对应数值的<strong>比值保持不变</strong>，那么这两个数量成正比例。</p>
+<table><tr><th>\(x\)</th><td>2</td><td>4</td><td>6</td></tr><tr><th>\(y\)</th><td>3</td><td>6</td><td>9</td></tr></table>
+<p>计算：</p><div class="formula">\[\frac{x}{y}=\frac23\]</div>
+<p>比值始终不变，所以 \(x\) 与 \(y\) 成正比例。</p>
+<h3>反比例</h3>
+<p>如果两个数量对应数值的<strong>乘积保持不变</strong>，那么这两个数量成反比例。</p>
+<table><tr><th>\(x\)</th><td>2</td><td>4</td><td>8</td></tr><tr><th>\(y\)</th><td>12</td><td>6</td><td>3</td></tr></table>
+<p>计算：</p><div class="formula">\[xy=24\]</div>
+<p>乘积始终不变，所以 \(x\) 与 \(y\) 成反比例。</p>
+<div class="key">关键区别：正比例看“比值不变”，反比例看“乘积不变”。</div>
+</section>
+
+<section id="s2">
+<h2>2. 有什么作用？</h2>
+<p>正比例和反比例可以帮助我们判断两个变化数量之间的关系，并根据已知的一组对应数量，求另一组对应数量。</p>
+<p>例如，在单价不变时，购买数量越多，总价也按相同的比例增加，这是正比例关系。</p>
+<p>完成同一项工作时，如果其他条件不变，工人人数增加，所需天数减少，可以用反比例关系解决。</p>
+<p>因此，遇到两个一起变化的数量时，重点不是只看“一个增加，另一个增加或减少”，而是判断：</p>
+<div class="formula">\[\text{比值是否不变？}\]</div>
+<p>或</p>
+<div class="formula">\[\text{乘积是否不变？}\]</div>
+</section>
+
+<section id="s3">
+<h2>3. 怎么判断、怎么算？</h2>
+<h3>判断正比例</h3>
+<p>看两个数量对应数值的比值是否保持不变。</p>
+<p>如果：</p><div class="formula">\[\frac{x_1}{y_1}=\frac{x_2}{y_2}\]</div>
+<p>那么可以按正比例关系计算。</p>
+<p>例如：</p><div class="formula">\[\frac{3}{5}=\frac{180}{x}\]</div>
+<p>交叉相乘：</p><div class="formula">\[3x=900\]</div>
+<p>所以：</p><div class="formula">\[\boxed{x=300}\]</div>
+
+<h3>判断反比例</h3>
+<p>看两个数量对应数值的乘积是否保持不变。</p>
+<p>如果：</p><div class="formula">\[x_1y_1=x_2y_2\]</div>
+<p>那么可以按反比例关系计算。</p>
+<p>例如：</p><div class="formula">\[4\times15=6x\]</div>
+<p>所以：</p><div class="formula">\[60=6x\]</div><div class="formula">\[\boxed{x=10}\]</div>
+
+<h3>判断时特别注意</h3>
+<p>不能只根据“同时增加”就判断正比例，也不能只根据“一个增加、一个减少”就判断反比例。</p>
+<p>真正的判断依据是：</p>
+<div class="formula">\[\boxed{\text{正比例：比值不变}}\]</div>
+<div class="formula">\[\boxed{\text{反比例：乘积不变}}\]</div>
+</section>
+
+<section id="s4">
+<h2>4. 快速自测</h2>
+<p class="note">先独立判断，答案与解析统一放在第7项。</p>
+<div class="quiz-item">1. 两个数量成正比例时，它们对应数值的比值保持不变。（　　）</div>
+<div class="quiz-item">2. 两个数量成反比例时，它们对应数值的乘积保持不变。（　　）</div>
+<div class="quiz-item">3. 一个数量增加，另一个数量也增加，这两个数量就一定成正比例。（　　）</div>
+<div class="quiz-item">4. 若 \(x\) 与 \(y\) 成反比例，当 \(x=4,\ y=6\) 时，则当 \(x=8\) 时，\(y=3\)。（　　）</div>
+<div class="quiz-item">5. 判断两个数量是否成反比例，只要看一个增加时另一个是否减少即可。（　　）</div>
+</section>
+
+<section id="s5">
+<h2>5. 考试常考</h2>
+<h3>题型1：判断两个数量成正比例还是反比例</h3>
+<p><strong>题目：</strong></p>
+<p>观察下表：</p>
+<table><tr><th>\(x\)</th><td>2</td><td>4</td><td>8</td></tr><tr><th>\(y\)</th><td>12</td><td>6</td><td>3</td></tr></table>
+<p>判断 \(x\) 与 \(y\) 成正比例还是反比例。</p>
+<div class="answer"><strong>答案：</strong>\(2\times12=4\times6=8\times3=24\)，所以 \(\boxed{x\text{ 与 }y\text{ 成反比例}}\)。</div>
+
+<h3>题型2：正比例应用</h3>
+<p><strong>题目：</strong></p>
+<p>某汽车以相同的速度行驶，3小时行驶180 km。照这样的速度，5小时行驶多少千米？</p>
+<div class="answer"><strong>答案：</strong>设5小时行驶 \(x\) km。<br>
+\[\frac{3}{5}=\frac{180}{x}\]
+\[3x=900\]
+\[\boxed{x=300\text{ km}}\]</div>
+
+<h3>题型3：反比例应用</h3>
+<p><strong>题目：</strong></p>
+<p>完成同一项工作，6名工人需要12天。如果工作效率相同，改由8名工人完成，需要多少天？</p>
+<div class="answer"><strong>答案：</strong>设需要 \(x\) 天。<br>
+\[6\times12=8x\]
+\[8x=72\]
+\[\boxed{x=9\text{天}}\]</div>
+
+<a class="detail-link" href="11.3_正比例与反比例_常考题详细解题步骤.html">查看以上常考题的详细解题步骤 →</a>
+</section>
+
+<section id="s6">
+<h2>6. 一句话总结</h2>
+<div class="summary">正比例看比值不变，反比例看乘积不变；先判断关系，再选择相应的比例方法计算。</div>
+</section>
+
+<section id="s7">
+<h2>7. 快速自测答案与解析</h2>
+<h3>1. 两个数量成正比例时，它们对应数值的比值保持不变。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：正比例的判断关键就是对应数值的比值保持不变。</div>
+
+<h3>2. 两个数量成反比例时，它们对应数值的乘积保持不变。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：反比例的判断关键是对应数值的乘积保持不变。</div>
+
+<h3>3. 一个数量增加，另一个数量也增加，这两个数量就一定成正比例。（　　）</h3>
+<div class="answer"><strong>答案：错误</strong><br>解析：同时增加不代表一定成正比例，还要检查对应数值的比值是否保持不变。</div>
+
+<h3>4. 若 \(x\) 与 \(y\) 成反比例，当 \(x=4,\ y=6\) 时，则当 \(x=8\) 时，\(y=3\)。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：\(4\times6=8\times3=24\)，乘积不变。</div>
+
+<h3>5. 判断两个数量是否成反比例，只要看一个增加时另一个是否减少即可。（　　）</h3>
+<div class="answer"><strong>答案：错误</strong><br>解析：一增一减还不够，必须检查两个数量对应数值的乘积是否保持不变。</div>
+</section>
+</main>
+</body>
+</html>
