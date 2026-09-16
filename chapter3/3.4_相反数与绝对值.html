@@ -1,0 +1,66 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>3.4 相反数与绝对值｜基础版</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#1f2937;--muted:#5f6b7a;--line:#dfe5ee;--accent:#2457a6;--soft:#eef4ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;line-height:1.75}
+.wrap,main{max-width:920px;margin:auto}header{background:#fff;border-bottom:1px solid var(--line);padding:30px 20px 24px}h1{margin:0;font-size:clamp(28px,5vw,42px)}.subtitle,.note,.caption{color:var(--muted)}
+nav{position:sticky;top:0;z-index:10;background:#fffffff5;border-bottom:1px solid var(--line);overflow-x:auto}nav .wrap{padding:8px 12px;display:flex;gap:8px;min-width:max-content}nav a{padding:9px 12px;color:var(--accent);background:var(--soft);border:1px solid #b9c9e4;border-radius:9px;text-decoration:none;font-size:14px;font-weight:700;white-space:nowrap}
+main{padding:22px 16px 56px}section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px;overflow-wrap:anywhere}h2{color:#173f78;margin:0 0 14px}h3{margin:20px 0 8px}
+.key{margin:14px 0;padding:12px 15px;border-left:4px solid var(--accent);background:var(--soft);border-radius:8px;font-weight:700}.formula{margin:12px 0;padding:10px 14px;text-align:center;background:#f8fafc;border:1px solid var(--line);border-radius:9px;font-weight:700;overflow-x:auto}
+.quiz{padding:11px 0;border-bottom:1px dashed var(--line);font-weight:600}.answer{padding:13px 15px;background:#f8fafc;border-radius:9px;margin:8px 0 14px}.summary{text-align:center;font-size:20px;font-weight:800;padding:18px;background:var(--soft);border-radius:10px}.detail{display:block;text-align:center;margin-top:24px;padding:14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800}
+.teach-figure{margin:18px auto;padding:14px;background:#f8fafc;border:1px solid var(--line);border-radius:12px;text-align:center;overflow-x:auto}.teach-svg{display:block;width:100%;max-width:720px;height:auto;margin:auto}.teach-svg text{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;fill:#1f2937}.caption{font-size:14px;margin-top:8px}
+@media(max-width:600px){section{padding:17px}h1{font-size:30px}.summary{font-size:18px}.teach-figure{padding:8px}}
+</style></head><body>
+<header><div class="wrap"><h1>3.4 相反数与绝对值</h1><div class="subtitle">基础版｜相反数看“相反”，绝对值看“距离”</div></div></header>
+<nav><div class="wrap"><a href="#s1">1. 是什么？</a><a href="#s2">2. 有什么作用？</a><a href="#s3">3. 怎么判断 / 怎么算？</a><a href="#s4">4. 快速自测</a><a href="#s5">5. 考试常考</a><a href="#s6">6. 一句话总结</a><a href="#s7">7. 答案与解析</a></div></nav><main>
+
+<section id="s1"><h2>1. 是什么？</h2>
+<h3>相反数</h3><p>一个数a的相反数是：</p><div class="formula">−a</div>
+<p>例如：10的相反数是−10，−10的相反数是10。因此，10与−10互为相反数。</p>
+<div class="formula">a＋(−a)＝0</div><div class="key">0的相反数是0。</div>
+<h3>绝对值</h3><p>一个数的绝对值，是这个数在数轴上对应的点与原点之间的<strong>距离</strong>。</p><p>6和−6虽然方向不同，但它们到原点的距离都是6，所以：</p><div class="formula">|6|＝6　　|−6|＝6</div>
+<figure class="teach-figure"><svg class="teach-svg" viewBox="0 0 720 210" role="img" aria-label="负6和6到原点的距离都为6">
+<defs><marker id="ax1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2457a6"/></marker><marker id="d1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto-start-reverse"><path d="M0,0 L6,3 L0,6 Z" fill="#52657d"/></marker></defs>
+<line x1="55" y1="115" x2="670" y2="115" stroke="#2457a6" stroke-width="3" marker-end="url(#ax1)"/>
+<g stroke="#52657d" stroke-width="2"><line x1="90" y1="104" x2="90" y2="126"/><line x1="135" y1="104" x2="135" y2="126"/><line x1="180" y1="104" x2="180" y2="126"/><line x1="225" y1="104" x2="225" y2="126"/><line x1="270" y1="104" x2="270" y2="126"/><line x1="315" y1="104" x2="315" y2="126"/><line x1="360" y1="101" x2="360" y2="129"/><line x1="405" y1="104" x2="405" y2="126"/><line x1="450" y1="104" x2="450" y2="126"/><line x1="495" y1="104" x2="495" y2="126"/><line x1="540" y1="104" x2="540" y2="126"/><line x1="585" y1="104" x2="585" y2="126"/><line x1="630" y1="104" x2="630" y2="126"/></g>
+<g font-size="18" text-anchor="middle"><text x="90" y="154">−6</text><text x="360" y="154">0</text><text x="630" y="154">6</text></g>
+<g fill="#2457a6"><circle cx="90" cy="115" r="6"/><circle cx="360" cy="115" r="6"/><circle cx="630" cy="115" r="6"/></g>
+<line x1="98" y1="67" x2="352" y2="67" stroke="#52657d" stroke-width="2.5" marker-start="url(#d1)" marker-end="url(#d1)"/><line x1="368" y1="67" x2="622" y2="67" stroke="#52657d" stroke-width="2.5" marker-start="url(#d1)" marker-end="url(#d1)"/>
+<text x="225" y="52" font-size="17" text-anchor="middle">距离6</text><text x="495" y="52" font-size="17" text-anchor="middle">距离6</text></svg><div class="caption">−6和6分别位于原点两侧，它们到原点的距离都为6。</div></figure>
+<p>因此：正数的绝对值是它本身；负数的绝对值是它的相反数；0的绝对值是0。</p><div class="key">|a| ≥ 0。绝对值表示距离，所以绝对值不会是负数。</div></section>
+
+<section id="s2"><h2>2. 有什么作用？</h2><ul><li>求一个整数的相反数；</li><li>表示数轴上方向相反、到原点距离相同的两个数；</li><li>求一个整数的绝对值；</li><li>完成含绝对值的简单计算；</li><li>根据一个数的绝对值确定可能的整数。</li></ul>
+<div class="key">相反数看“相反”，绝对值看“距离”。</div><div class="formula">−8的相反数是8　　|−8|＝8</div><p>结果虽然相同，但两个概念的意义不同。</p></section>
+
+<section id="s3"><h2>3. 怎么判断 / 怎么算？</h2>
+<h3>① 怎么求相反数</h3><p>求一个数的相反数，就是找出与它相加等于0的数。</p><div class="formula">−7＋7＝0　→　−7的相反数是7<br>29＋(−29)＝0　→　29的相反数是−29<br>0＋0＝0　→　0的相反数是0</div>
+<h3>② 怎么求绝对值</h3><div class="key">正数的绝对值＝本身<br>负数的绝对值＝它的相反数<br>0的绝对值＝0</div><div class="formula">|−7|＝7　　|29|＝29　　|0|＝0</div>
+<h3>③ 含绝对值的算式怎么算</h3><p>遇到绝对值符号时，要先看清楚<strong>绝对值符号里面是什么</strong>。</p><div class="formula">|−3＋20|＝17<br>|−3|＋|20|＝23<br><br>|−3＋20| ≠ |−3|＋|20|</div>
+<div class="formula">|3−20|＝17<br>|3|−|20|＝−17<br><br>|3−20| ≠ |3|−|20|</div><div class="key">绝对值符号不能随意拆开。</div>
+<h3>④ 已知绝对值，怎么找原来的整数</h3><p>如果一个整数的绝对值是4，那么这个整数在数轴上到原点的距离是4。原点左、右各有一个符合条件的整数：</p><div class="formula">−4，4</div>
+<figure class="teach-figure"><svg class="teach-svg" viewBox="0 0 720 190" role="img" aria-label="负4和4到原点的距离都是4">
+<defs><marker id="ax2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2457a6"/></marker></defs>
+<line x1="70" y1="100" x2="655" y2="100" stroke="#2457a6" stroke-width="3" marker-end="url(#ax2)"/>
+<g stroke="#52657d" stroke-width="2"><line x1="120" y1="89" x2="120" y2="111"/><line x1="180" y1="89" x2="180" y2="111"/><line x1="240" y1="89" x2="240" y2="111"/><line x1="300" y1="89" x2="300" y2="111"/><line x1="360" y1="86" x2="360" y2="114"/><line x1="420" y1="89" x2="420" y2="111"/><line x1="480" y1="89" x2="480" y2="111"/><line x1="540" y1="89" x2="540" y2="111"/><line x1="600" y1="89" x2="600" y2="111"/></g>
+<g fill="#2457a6"><circle cx="120" cy="100" r="6"/><circle cx="360" cy="100" r="6"/><circle cx="600" cy="100" r="6"/></g>
+<g font-size="18" text-anchor="middle"><text x="120" y="140">−4</text><text x="360" y="140">0</text><text x="600" y="140">4</text></g><text x="240" y="60" font-size="17" text-anchor="middle">距离4</text><text x="480" y="60" font-size="17" text-anchor="middle">距离4</text></svg><div class="caption">−4和4分别在原点两侧，距0都是4个单位。</div></figure>
+<p>特别地，如果绝对值是0，那么只有0。</p></section>
+
+<section id="s4"><h2>4. 快速自测</h2><p class="note">先独立判断，答案与解析统一放在第7项。</p>
+<div class="quiz">1. −12的相反数是12。（　　）</div><div class="quiz">2. 0没有相反数。（　　）</div><div class="quiz">3. |−9|＝9。（　　）</div><div class="quiz">4. 一个数的绝对值可能是负数。（　　）</div><div class="quiz">5. |−3＋5|＝|−3|＋|5|。（　　）</div></section>
+
+<section id="s5"><h2>5. 考试常考</h2>
+<h3>题型1：求一个数的相反数</h3><p><strong>题目：</strong>求下列各数的相反数：① −18　② 25　③ 0</p><div class="answer"><strong>答案：</strong>① 18　② −25　③ 0</div>
+<h3>题型2：求一个整数的绝对值</h3><p><strong>题目：</strong>求下列各数的绝对值：① −13　② 8　③ 0</p><div class="answer"><strong>答案：</strong>① 13　② 8　③ 0</div>
+<h3>题型3：含绝对值的简单计算</h3><p><strong>题目：</strong>计算：① |−8＋15|　② |−8|＋|15|</p><div class="answer"><strong>答案：</strong>① 7　② 23</div>
+<h3>题型4：已知绝对值求整数</h3><p><strong>题目：</strong>哪些整数的绝对值等于6？</p><div class="answer"><strong>答案：</strong>6，−6</div>
+<a class="detail" href="3.4_相反数与绝对值_常考题详细解题步骤.html">查看以上常考题的详细解题步骤 →</a></section>
+
+<section id="s6"><h2>6. 一句话总结</h2><div class="summary">相反数表示与原数相反的数，一个数与它的相反数之和为0；绝对值表示数轴上的点到原点的距离，所以绝对值一定不小于0。</div></section>
+
+<section id="s7"><h2>7. 快速自测答案与解析</h2>
+<h3>1. −12的相反数是12。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：因为−12＋12＝0。</div>
+<h3>2. 0没有相反数。（　　）</h3><div class="answer"><strong>答案：错误</strong><br>解析：0的相反数仍然是0。</div>
+<h3>3. |−9|＝9。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：−9到原点的距离是9。</div>
+<h3>4. 一个数的绝对值可能是负数。（　　）</h3><div class="answer"><strong>答案：错误</strong><br>解析：绝对值表示距离，因此绝对值不会是负数。</div>
+<h3>5. |−3＋5|＝|−3|＋|5|。（　　）</h3><div class="answer"><strong>答案：错误</strong><br>解析：左边等于2，右边等于8，所以两边不相等。</div></section>
+</main></body></html>
