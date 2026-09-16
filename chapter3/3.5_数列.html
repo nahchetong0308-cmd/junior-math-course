@@ -1,0 +1,51 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3.5 数列｜基础版</title><style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#1f2937;--muted:#5f6b7a;--line:#dfe5ee;--accent:#2457a6;--soft:#eef4ff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;line-height:1.75}.wrap,main{max-width:920px;margin:auto}header{background:#fff;border-bottom:1px solid var(--line);padding:30px 20px 24px}h1{margin:0;font-size:clamp(28px,5vw,42px)}.subtitle,.note{color:var(--muted)}nav{position:sticky;top:0;z-index:10;background:#fffffff5;border-bottom:1px solid var(--line);overflow-x:auto}nav .wrap{padding:8px 12px;display:flex;gap:8px;min-width:max-content}nav a{padding:9px 12px;color:var(--accent);background:var(--soft);border:1px solid #b9c9e4;border-radius:9px;text-decoration:none;font-size:14px;font-weight:700;white-space:nowrap}main{padding:22px 16px 56px}section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px;overflow-wrap:anywhere}h2{color:#173f78;margin:0 0 14px}h3{margin:20px 0 8px}.key{margin:14px 0;padding:12px 15px;border-left:4px solid var(--accent);background:var(--soft);border-radius:8px;font-weight:700}.formula{margin:12px 0;padding:10px 14px;text-align:center;background:#f8fafc;border:1px solid var(--line);border-radius:9px;font-weight:700;overflow-x:auto}.quiz{padding:11px 0;border-bottom:1px dashed var(--line);font-weight:600}.answer{padding:13px 15px;background:#f8fafc;border-radius:9px;margin:8px 0 14px}.summary{text-align:center;font-size:20px;font-weight:800;padding:18px;background:var(--soft);border-radius:10px}.detail{display:block;text-align:center;margin-top:24px;padding:14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800}@media(max-width:600px){section{padding:17px}h1{font-size:30px}.summary{font-size:18px}}</style></head><body>
+<header><div class="wrap"><h1>3.5 数列</h1><div class="subtitle">基础版｜观察已知项 → 找出一致规律 → 检查规律 → 写出后续项</div></div></header>
+<nav><div class="wrap"><a href="#s1">1. 是什么？</a><a href="#s2">2. 有什么作用？</a><a href="#s3">3. 怎么判断 / 怎么做？</a><a href="#s4">4. 快速自测</a><a href="#s5">5. 考试常考</a><a href="#s6">6. 一句话总结</a><a href="#s7">7. 答案与解析</a></div></nav><main>
+
+<section id="s1"><h2>1. 是什么？</h2><p>把一列数按照一定的次序排列起来，可以形成一个<strong>数列</strong>。</p>
+<p>例如：</p><div class="formula">2，5，8，11，14，……</div><p>这一列数中，从第二个数开始，每一个数都比前一个数多3。</p>
+<p>又如：</p><div class="formula">3，6，12，24，48，……</div><p>从第二个数开始，每一个数都是前一个数的2倍。</p>
+<div class="key">学习数列，关键不是只看某两个数之间的关系，而是找出一个能够连续解释已知各项的规律，再按照同一个规律继续写下去。</div></section>
+
+<section id="s2"><h2>2. 有什么作用？</h2><ul><li>根据相邻两项之间固定的加减关系继续写数；</li><li>根据相邻两项之间固定的倍数关系继续写数；</li><li>发现相邻两项之间逐步变化的关系；</li><li>根据前面几项之间的关系确定下一项；</li><li>识别平方、立方、乘积等数值结构；</li><li>识别正负号交替或分组出现的组合规律。</li></ul>
+<div class="key">观察已知项 → 找出一致规律 → 检查规律 → 写出后续项。</div></section>
+
+<section id="s3"><h2>3. 怎么判断 / 怎么做？</h2>
+<h3>① 先看相邻两项是不是固定增加或减少</h3><div class="formula">4，9，14，19，24，……<br>相邻两项都增加5 → 29，34，39</div>
+<p>如果每次减少同一个数，也按同样的方法判断：</p><div class="formula">30，26，22，18，……<br>每次减少4 → 14，10，6</div>
+<h3>② 再看相邻两项是不是按固定倍数变化</h3><div class="formula">2，6，18，54，……<br>每一项都是前一项的3倍 → 162，486，1458</div>
+<h3>③ 如果不是固定加减，要检查“变化量”本身有没有规律</h3><div class="formula">2，5，9，14，20，……<br>依次增加3，4，5，6 → 再增加7，8，9<br>→ 27，35，44</div>
+<h3>④ 检查下一项是不是由前面几项得到</h3><div class="formula">1，1，2，3，5，8，……<br>从第三项开始，每一项都是前两项之和<br>→ 13，21，34</div>
+<h3>⑤ 观察每一项本身有没有特殊数值结构</h3><div class="formula">1，4，9，16，25，……<br>＝1<sup>2</sup>，2<sup>2</sup>，3<sup>2</sup>，4<sup>2</sup>，5<sup>2</sup>，……<br>→ 36，49，64</div>
+<p>遇到这类数列，不能只盯着相邻两项的差，还要观察每一个数本身的结构。</p>
+<h3>⑥ 注意正负号、位置或分组是否有规律</h3><div class="formula">1，−2，3，−4，5，−6，……<br>数值依次为1，2，3，4，5，6，……<br>符号按＋，−，＋，−，＋，−，……交替<br>→ 7，−8，9</div>
+<div class="key">判断数列规律的基本顺序：固定加减 → 固定倍数 → 相邻变化量 → 前几项关系 → 数值结构 → 正负号或分组结构。</div>
+<p>找到规律以后，还要回头检查：这个规律能不能一致解释已经给出的各项？如果不能，就要重新寻找规律。</p></section>
+
+<section id="s4"><h2>4. 快速自测</h2><p class="note">先独立判断，答案与解析统一放在第7项。</p>
+<div class="quiz">1. 数列5，8，11，14，……中，每一项都比前一项增加3。（　　）</div>
+<div class="quiz">2. 数列2，6，18，54，……的下一项是108。（　　）</div>
+<div class="quiz">3. 数列1，4，9，16，25，……可以从平方数的结构观察规律。（　　）</div>
+<div class="quiz">4. 数列1，1，2，3，5，8，……从第三项开始，每一项都是前两项之和。（　　）</div>
+<div class="quiz">5. 只要一个规律能够解释数列中的前两项，就一定可以用它确定整个数列的后续项。（　　）</div></section>
+
+<section id="s5"><h2>5. 考试常考</h2>
+<h3>题型1：根据固定加减规律补数列</h3><p><strong>题目：</strong>写出下面数列的后三项：7，12，17，22，27，……</p><div class="answer"><strong>答案：</strong>32，37，42</div>
+<h3>题型2：根据固定倍数规律补数列</h3><p><strong>题目：</strong>写出下面数列的后三项：2，8，32，128，……</p><div class="answer"><strong>答案：</strong>512，2048，8192</div>
+<h3>题型3：根据变化的相邻差规律补数列</h3><p><strong>题目：</strong>写出下面数列的后三项：3，7，12，18，25，……</p><div class="answer"><strong>答案：</strong>33，42，52</div>
+<h3>题型4：根据前几项之间的关系补数列</h3><p><strong>题目：</strong>写出下面数列的后三项：2，3，5，8，13，……</p><div class="answer"><strong>答案：</strong>21，34，55</div>
+<h3>题型5：根据数值结构找规律</h3><p><strong>题目：</strong>写出下面数列的后三项：1，8，27，64，125，……</p><div class="answer"><strong>答案：</strong>216，343，512</div>
+<h3>题型6：根据正负号组合规律补数列</h3><p><strong>题目：</strong>写出下面数列的后三项：−1，2，−3，4，−5，6，……</p><div class="answer"><strong>答案：</strong>−7，8，−9</div>
+<a class="detail" href="3.5_数列_常考题详细解题步骤.html">查看以上常考题的详细解题步骤 →</a></section>
+
+<section id="s6"><h2>6. 一句话总结</h2><div class="summary">找数列规律要从相邻项的加减、倍数、变化量、前几项关系、数值结构和正负号等方面观察，并用同一个规律检查全部已知项后再写出后续项。</div></section>
+
+<section id="s7"><h2>7. 快速自测答案与解析</h2>
+<h3>1. 数列5，8，11，14，……中，每一项都比前一项增加3。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：相邻两项的差都是3。</div>
+<h3>2. 数列2，6，18，54，……的下一项是108。（　　）</h3><div class="answer"><strong>答案：错误</strong><br>解析：每一项都是前一项的3倍，因此下一项是54×3＝162。</div>
+<h3>3. 数列1，4，9，16，25，……可以从平方数的结构观察规律。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：这些数依次是1<sup>2</sup>，2<sup>2</sup>，3<sup>2</sup>，4<sup>2</sup>，5<sup>2</sup>，……</div>
+<h3>4. 数列1，1，2，3，5，8，……从第三项开始，每一项都是前两项之和。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：例如1＋1＝2、1＋2＝3、2＋3＝5。</div>
+<h3>5. 只要一个规律能够解释数列中的前两项，就一定可以用它确定整个数列的后续项。（　　）</h3><div class="answer"><strong>答案：错误</strong><br>解析：找到的规律必须能够一致解释已经给出的各项，不能只检查前两项。</div></section>
+</main></body></html>
