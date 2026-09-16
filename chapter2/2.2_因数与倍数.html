@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.2 因数与倍数｜基础版</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#1f2937;--muted:#5f6b7a;--line:#dfe5ee;--accent:#2457a6;--soft:#eef4ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;line-height:1.75}
+header{background:#fff;border-bottom:1px solid var(--line);padding:30px 20px 24px}.wrap,main{max-width:920px;margin:auto}
+h1{margin:0;font-size:clamp(28px,5vw,42px)}.subtitle,.note{color:var(--muted)}
+nav{position:sticky;top:0;z-index:10;background:#fffffff5;border-bottom:1px solid var(--line);overflow-x:auto}
+nav .wrap{padding:8px 12px;display:flex;gap:8px;min-width:max-content}nav a{padding:9px 12px;color:var(--accent);background:var(--soft);border:1px solid #b9c9e4;border-radius:9px;text-decoration:none;font-size:14px;font-weight:700;white-space:nowrap}
+main{padding:22px 16px 56px}section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px;overflow-wrap:anywhere}
+h2{color:#173f78;margin:0 0 14px}h3{margin:20px 0 8px}.key{margin:14px 0;padding:12px 15px;border-left:4px solid var(--accent);background:var(--soft);border-radius:8px;font-weight:700}
+.formula{margin:12px 0;padding:10px 14px;text-align:center;background:#f8fafc;border:1px solid var(--line);border-radius:9px;font-weight:700;overflow-x:auto}
+.quiz{padding:11px 0;border-bottom:1px dashed var(--line);font-weight:600}.answer{padding:13px 15px;background:#f8fafc;border-radius:9px;margin:8px 0 14px}
+.summary{text-align:center;font-size:20px;font-weight:800;padding:18px;background:var(--soft);border-radius:10px}.detail{display:block;text-align:center;margin-top:24px;padding:14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800}
+ul{padding-left:1.4em}
+@media(max-width:600px){section{padding:17px}h1{font-size:30px}.summary{font-size:18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>2.2 因数与倍数</h1><div class="subtitle">基础版｜整除关系 → 找因数 → 写倍数 → 判断关系</div></div></header>
+<nav><div class="wrap">
+<a href="#s1">1. 是什么？</a><a href="#s2">2. 有什么作用？</a><a href="#s3">3. 怎么判断 / 怎么做？</a><a href="#s4">4. 快速自测</a><a href="#s5">5. 考试常考</a><a href="#s6">6. 一句话总结</a><a href="#s7">7. 答案与解析</a>
+</div></nav>
+<main>
+<section id="s1"><h2>1. 是什么？</h2>
+<p>如果一个自然数能够被另一个自然数整除，就可以建立<strong>因数与倍数</strong>的关系。</p>
+<div class="formula">30÷5＝6</div>
+<p>没有余数，所以：<strong>5是30的因数，30是5的倍数。</strong></p>
+<div class="key">因数和倍数是相互依存的关系，必须说明是哪两个数之间的关系，不能脱离另一个数单独说“5是因数”或“30是倍数”。</div>
+<h3>一个自然数的因数</h3>
+<div class="formula">30＝1×30＝2×15＝3×10＝5×6</div>
+<p>所以30的全部因数是：</p><div class="formula">1，2，3，5，6，10，15，30</div>
+<p>一个自然数的因数个数是<strong>有限的</strong>。其中：<strong>最小因数是1，最大因数是它本身。</strong></p>
+<h3>一个自然数的倍数</h3>
+<p>例如，5的倍数有：</p><div class="formula">5，10，15，20，25，30，……</div>
+<p>一个自然数的倍数有<strong>无限多个</strong>。其中：<strong>最小倍数是它本身。</strong></p>
+</section>
+
+<section id="s2"><h2>2. 有什么作用？</h2>
+<p>学习因数与倍数，可以帮助我们：</p>
+<ul><li>找出一个自然数的全部因数；</li><li>按要求写出一个自然数的倍数；</li><li>判断两个自然数之间是否存在因数、倍数关系；</li><li>判断一个数的最大因数、最小因数和最小倍数。</li></ul>
+<div class="key">先判断能不能整除，再确定谁是谁的因数、谁是谁的倍数。</div>
+</section>
+
+<section id="s3"><h2>3. 怎么判断 / 怎么做？</h2>
+<h3>① 求一个自然数的全部因数——成对寻找</h3>
+<p>例如，求24的全部因数。</p>
+<div class="formula">1×24＝24<br>2×12＝24<br>3×8＝24<br>4×6＝24</div>
+<p>因此：</p><div class="formula">24的因数：1，2，3，4，6，8，12，24</div>
+<div class="key">成对寻找，并且不要遗漏或重复。</div>
+
+<h3>② 求倍数——用这个数依次乘自然数</h3>
+<p>例如，求5的首6个倍数：</p>
+<div class="formula">5×1＝5，5×2＝10，……</div>
+<p>得到：</p><div class="formula">5，10，15，20，25，30</div>
+<p>如果题目规定范围，还必须检查范围条件。例如，写出小于50的12的倍数：</p>
+<div class="formula">12，24，36，48</div>
+
+<h3>③ 判断一个数是不是另一个数的因数或倍数——做除法</h3>
+<p>例如，判断104是不是8的倍数。</p><div class="formula">104÷8＝13</div>
+<p>没有余数，因此：<strong>104是8的倍数，8是104的因数。</strong></p>
+<p>如果除法有余数，就不能建立这样的因数、倍数关系。</p>
+
+<h3>④ 判断最大因数和最小因数</h3>
+<p>对于一个自然数：<strong>最小因数是1；最大因数是它本身。</strong></p>
+<p>例如，35的最小因数是1，最大因数是35。</p>
+
+<h3>⑤ 分清“有限”和“无限”</h3>
+<p>一个自然数的因数必须能够整除这个数，所以能够找到的因数数量是有限的。</p>
+<p>而它的倍数可以不断继续：</p><div class="formula">7，14，21，28，35，……</div>
+<div class="key">因数的个数有限，倍数的个数无限。</div>
+</section>
+
+<section id="s4"><h2>4. 快速自测</h2><p class="note">先独立判断，答案与解析统一放在第7项。</p>
+<div class="quiz">1. 因为 24÷6＝4，所以6是24的因数，24是6的倍数。（　　）</div>
+<div class="quiz">2. 18的因数有无限多个。（　　）</div>
+<div class="quiz">3. 9的最小倍数是9。（　　）</div>
+<div class="quiz">4. 1是每个自然数的因数。（　　）</div>
+<div class="quiz">5. 因为 35÷6 有余数，所以35不是6的倍数。（　　）</div>
+</section>
+
+<section id="s5"><h2>5. 考试常考</h2>
+<h3>题型1：求一个自然数的全部因数</h3>
+<p><strong>题目：</strong>写出36的全部因数。</p>
+<div class="answer"><strong>答案：</strong>1，2，3，4，6，9，12，18，36</div>
+
+<h3>题型2：按要求写一个自然数的倍数</h3>
+<p><strong>题目：</strong>写出所有小于70的15的倍数。</p>
+<div class="answer"><strong>答案：</strong>15，30，45，60</div>
+
+<h3>题型3：判断因数与倍数关系</h3>
+<p><strong>题目：</strong>判断156是不是12的倍数，并说明12是不是156的因数。</p>
+<div class="answer"><strong>答案：</strong>156是12的倍数；12是156的因数。</div>
+
+<a class="detail" href="2.2_因数与倍数_常考题详细解题步骤.html">查看以上常考题的详细解题步骤 →</a>
+</section>
+
+<section id="s6"><h2>6. 一句话总结</h2>
+<div class="summary">判断因数与倍数先看能否整除：一个自然数的因数有限，最小因数是1、最大因数是本身；倍数无限，最小倍数是本身。</div>
+</section>
+
+<section id="s7"><h2>7. 快速自测答案与解析</h2>
+<h3>1. 因为 24÷6＝4，所以6是24的因数，24是6的倍数。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：24能被6整除，所以6是24的因数，24是6的倍数。</div>
+<h3>2. 18的因数有无限多个。（　　）</h3><div class="answer"><strong>答案：错误</strong><br>解析：一个自然数的因数个数是有限的。</div>
+<h3>3. 9的最小倍数是9。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：一个自然数的最小倍数是它本身。</div>
+<h3>4. 1是每个自然数的因数。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：每个自然数都能被1整除。</div>
+<h3>5. 因为 35÷6 有余数，所以35不是6的倍数。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：35不能被6整除，所以35不是6的倍数。</div>
+</section>
+</main>
+</body>
+</html>
