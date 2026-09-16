@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.1 奇数与偶数｜基础版</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#1f2937;--muted:#5f6b7a;--line:#dfe5ee;--accent:#2457a6;--soft:#eef4ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;line-height:1.75}
+header{background:#fff;border-bottom:1px solid var(--line);padding:30px 20px 24px}.wrap,main{max-width:920px;margin:auto}
+h1{margin:0;font-size:clamp(28px,5vw,42px)}.subtitle,.note{color:var(--muted)}
+nav{position:sticky;top:0;z-index:10;background:#fffffff5;border-bottom:1px solid var(--line);overflow-x:auto}
+nav .wrap{padding:8px 12px;display:flex;gap:8px;min-width:max-content}nav a{padding:9px 12px;color:var(--accent);background:var(--soft);border:1px solid #b9c9e4;border-radius:9px;text-decoration:none;font-size:14px;font-weight:700;white-space:nowrap}
+main{padding:22px 16px 56px}section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px;overflow-wrap:anywhere}
+h2{color:#173f78;margin:0 0 14px}h3{margin:20px 0 8px}.key{margin:14px 0;padding:12px 15px;border-left:4px solid var(--accent);background:var(--soft);border-radius:8px;font-weight:700}
+.formula{margin:12px 0;padding:10px 14px;text-align:center;background:#f8fafc;border:1px solid var(--line);border-radius:9px;font-weight:700;overflow-x:auto}
+.quiz{padding:11px 0;border-bottom:1px dashed var(--line);font-weight:600}.answer{padding:13px 15px;background:#f8fafc;border-radius:9px;margin:8px 0 14px}
+.summary{text-align:center;font-size:20px;font-weight:800;padding:18px;background:var(--soft);border-radius:10px}.detail{display:block;text-align:center;margin-top:24px;padding:14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800}
+ul{padding-left:1.4em}
+@media(max-width:600px){section{padding:17px}h1{font-size:30px}.summary{font-size:18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>2.1 奇数与偶数</h1><div class="subtitle">基础版｜能否被2整除 → 判断奇数与偶数 → 指定范围列数</div></div></header>
+<nav><div class="wrap">
+<a href="#s1">1. 是什么？</a><a href="#s2">2. 有什么作用？</a><a href="#s3">3. 怎么判断 / 怎么做？</a><a href="#s4">4. 快速自测</a><a href="#s5">5. 考试常考</a><a href="#s6">6. 一句话总结</a><a href="#s7">7. 答案与解析</a>
+</div></nav>
+<main>
+<section id="s1"><h2>1. 是什么？</h2>
+<p>自然数可以按照能不能被2整除，分成<strong>偶数</strong>和<strong>奇数</strong>。</p>
+<h3>偶数</h3><p>能被2整除的自然数叫做<strong>偶数</strong>。</p><div class="formula">2，4，6，8，10，12，……</div><p><strong>0也是偶数。</strong></p>
+<h3>奇数</h3><p>不能被2整除的自然数叫做<strong>奇数</strong>。</p><div class="formula">1，3，5，7，9，11，……</div>
+<div class="key">一个自然数要么是奇数，要么是偶数。</div>
+</section>
+
+<section id="s2"><h2>2. 有什么作用？</h2>
+<p>认识奇数和偶数，可以帮助我们：</p>
+<ul><li>判断一个自然数是奇数还是偶数；</li><li>从一组自然数中找出奇数或偶数；</li><li>按照指定范围写出所有奇数或偶数；</li><li>正确理解0的奇偶性。</li></ul>
+<div class="key">先看一个自然数能不能被2整除，再判断它是奇数还是偶数。</div>
+</section>
+
+<section id="s3"><h2>3. 怎么判断 / 怎么做？</h2>
+<h3>① 判断一个自然数是奇数还是偶数</h3>
+<p>判断标准只有一个：</p><div class="formula">能被2整除 → 偶数<br>不能被2整除 → 奇数</div>
+<p>例如：</p><div class="formula">18÷2＝9</div><p>没有余数，所以18是<strong>偶数</strong>。</p>
+<div class="formula">25÷2＝12……1</div><p>不能被2整除，所以25是<strong>奇数</strong>。</p>
+<div class="key">本节按照“能否被2整除”判断。</div>
+
+<h3>② 从一组数中找奇数和偶数</h3>
+<p>例如：13，20，27，34，41，56。</p>
+<p>逐个判断是否能被2整除：</p><ul><li>奇数：13，27，41；</li><li>偶数：20，34，56。</li></ul>
+<p>不要漏掉任何一个数，也不要把同一个数重复分类。</p>
+
+<h3>③ 在指定范围内写出奇数或偶数</h3>
+<p>先看清楚范围中是否包含端点，再按照奇偶数的顺序逐个写出。</p>
+<p>例如，写出<strong>小于16的自然数中的偶数</strong>：</p><div class="formula">0，2，4，6，8，10，12，14</div>
+<p>再如，写出<strong>大于20且小于30的奇数</strong>：</p><div class="formula">21，23，25，27，29</div>
+<div class="key">奇数或偶数条件 ＋ 范围条件。</div>
+
+<h3>④ 特别注意0</h3><div class="formula">0÷2＝0</div>
+<p>所以：<strong>0是偶数，不是奇数。</strong></p>
+</section>
+
+<section id="s4"><h2>4. 快速自测</h2><p class="note">先独立判断，答案与解析统一放在第7项。</p>
+<div class="quiz">1. 18能被2整除，所以18是偶数。（　　）</div>
+<div class="quiz">2. 27不能被2整除，所以27是奇数。（　　）</div>
+<div class="quiz">3. 0既不是奇数，也不是偶数。（　　）</div>
+<div class="quiz">4. 大于10且小于16的奇数有11、13、15。（　　）</div>
+<div class="quiz">5. 2是偶数。（　　）</div>
+</section>
+
+<section id="s5"><h2>5. 考试常考</h2>
+<h3>题型1：判断自然数的奇偶性</h3>
+<p><strong>题目：</strong>把下面各数分别归入奇数和偶数：</p><div class="formula">16，23，35，42，57，68</div>
+<div class="answer"><strong>答案：</strong><br>奇数：23，35，57<br>偶数：16，42，68</div>
+
+<h3>题型2：在指定范围内写出奇数或偶数</h3>
+<p><strong>题目：</strong>写出大于30且小于45的所有偶数。</p>
+<div class="answer"><strong>答案：</strong>32，34，36，38，40，42，44</div>
+
+<a class="detail" href="2.1_奇数与偶数_常考题详细解题步骤.html">查看以上常考题的详细解题步骤 →</a>
+</section>
+
+<section id="s6"><h2>6. 一句话总结</h2>
+<div class="summary">能被2整除的是偶数，不能被2整除的是奇数；判断范围题时，还要同时看清范围的两个端点是否包括在内。</div>
+</section>
+
+<section id="s7"><h2>7. 快速自测答案与解析</h2>
+<h3>1. 18能被2整除，所以18是偶数。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：18能被2整除，因此是偶数。</div>
+<h3>2. 27不能被2整除，所以27是奇数。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：27除以2有余数，因此是奇数。</div>
+<h3>3. 0既不是奇数，也不是偶数。（　　）</h3><div class="answer"><strong>答案：错误</strong><br>解析：0能被2整除，所以0是偶数。</div>
+<h3>4. 大于10且小于16的奇数有11、13、15。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：11、13、15都是奇数，并且都在指定范围内。</div>
+<h3>5. 2是偶数。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：2能被2整除，所以2是偶数。</div>
+</section>
+</main></body></html>
