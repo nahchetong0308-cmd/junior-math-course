@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.3 四则运算三大定律｜基础版</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#1f2937;--muted:#5f6b7a;--line:#dfe5ee;--accent:#2457a6;--soft:#eef4ff}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;line-height:1.75}
+header{background:#fff;border-bottom:1px solid var(--line);padding:30px 20px 24px}
+.wrap,main{max-width:920px;margin:auto}
+h1{margin:0;font-size:clamp(28px,5vw,42px)} .subtitle,.note{color:var(--muted)}
+nav{position:sticky;top:0;z-index:10;background:#fffffff5;border-bottom:1px solid var(--line);overflow-x:auto}
+nav .wrap{padding:8px 12px;display:flex;gap:8px;min-width:max-content}
+nav a{padding:9px 12px;color:var(--accent);background:var(--soft);border:1px solid #b9c9e4;border-radius:9px;text-decoration:none;font-size:14px;font-weight:700;white-space:nowrap}
+main{padding:22px 16px 56px}
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px;overflow-wrap:anywhere}
+h2{color:#173f78;margin:0 0 14px} h3{margin:20px 0 8px}
+.key{margin:14px 0;padding:12px 15px;border-left:4px solid var(--accent);background:var(--soft);border-radius:8px;font-weight:700}
+.formula{margin:12px 0;padding:10px 14px;text-align:center;background:#f8fafc;border:1px solid var(--line);border-radius:9px;font-weight:700;overflow-x:auto}
+.quiz{padding:11px 0;border-bottom:1px dashed var(--line);font-weight:600}
+.answer{padding:13px 15px;background:#f8fafc;border-radius:9px;margin:8px 0 14px}
+.summary{text-align:center;font-size:20px;font-weight:800;padding:18px;background:var(--soft);border-radius:10px}
+.detail{display:block;text-align:center;margin-top:24px;padding:14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800}
+ul{padding-left:1.4em}
+@media(max-width:600px){section{padding:17px}h1{font-size:30px}.summary{font-size:18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>1.3 四则运算三大定律</h1>
+<div class="subtitle">基础版｜交换律 → 结合律 → 分配律 → 简便计算</div>
+</div></header>
+
+<nav><div class="wrap">
+<a href="#s1">1. 是什么？</a><a href="#s2">2. 有什么作用？</a><a href="#s3">3. 怎么判断 / 怎么算？</a>
+<a href="#s4">4. 快速自测</a><a href="#s5">5. 考试常考</a><a href="#s6">6. 一句话总结</a><a href="#s7">7. 答案与解析</a>
+</div></nav>
+
+<main>
+<section id="s1">
+<h2>1. 是什么？</h2>
+<p>完整数四则运算中，可以利用三种重要的运算定律改变计算形式，使一些计算更简便：</p>
+<div class="key">交换律、结合律、分配律。</div>
+
+<h3>① 交换律</h3>
+<p>加法交换两个加数的位置，和不变：</p>
+<div class="formula">a＋b＝b＋a</div>
+<p>乘法交换两个因数的位置，积不变：</p>
+<div class="formula">a×b＝b×a</div>
+<p><strong>减法和除法不满足交换律。</strong></p>
+
+<h3>② 结合律</h3>
+<p>三个数相加，可以先把前两个数相加，也可以先把后两个数相加：</p>
+<div class="formula">(a＋b)＋c＝a＋(b＋c)</div>
+<p>三个数相乘，可以先把前两个数相乘，也可以先把后两个数相乘：</p>
+<div class="formula">(a×b)×c＝a×(b×c)</div>
+<p>因此，加法和乘法中可以根据数字特点重新组合，先算容易计算的部分。</p>
+<p><strong>减法和除法不能机械套用结合律。</strong></p>
+
+<h3>③ 分配律</h3>
+<p>一个数乘两个数的和，可以分别相乘，再把所得的积相加：</p>
+<div class="formula">(a＋b)×c＝a×c＋b×c</div>
+<div class="formula">c×(a＋b)＝c×a＋c×b</div>
+<p>对于两个数的差，也有：</p>
+<div class="formula">(a－b)×c＝a×c－b×c</div>
+<div class="formula">c×(a－b)＝c×a－c×b</div>
+</section>
+
+<section id="s2">
+<h2>2. 有什么作用？</h2>
+<p>三大运算定律最重要的作用是：</p>
+<div class="key">在不改变计算结果的情况下，把算式变成更容易计算的形式。</div>
+<p>例如，可以：</p>
+<ul>
+<li>调换加数或因数的位置；</li>
+<li>把容易凑成整十、整百、整千的数先结合；</li>
+<li>找出相同的乘数进行简算；</li>
+<li>把接近整十、整百、整千的数拆开计算。</li>
+</ul>
+<p>所以简便计算不是随意改变运算顺序，而是：<strong>先观察算式结构，再选择合适的运算定律。</strong></p>
+</section>
+
+<section id="s3">
+<h2>3. 怎么判断 / 怎么算？</h2>
+
+<h3>① 看到“换位置”——想交换律</h3>
+<p>例如：</p><div class="formula">50×87×2</div>
+<p>观察到50×2＝100，可以先交换87和2的位置，再计算：</p>
+<div class="formula">50×2×87</div>
+<div class="key">判断关键：只是交换加数的位置，或交换因数的位置。</div>
+
+<h3>② 看到“能凑整”——想交换律和结合律</h3>
+<p>例如：</p><div class="formula">17＋8＋12＋13</div>
+<p>观察：17＋13＝30，8＋12＝20，所以可以重新组合：</p>
+<div class="formula">(17＋13)＋(8＋12)＝30＋20＝50</div>
+<p>乘法也一样。例如：</p>
+<div class="formula">8×7×2×125</div>
+<p>可以先算8×125＝1000，以及7×2＝14，从而使计算更简便。</p>
+<div class="key">判断关键：找一找哪些数先算能够得到整十、整百、整千等容易计算的数。</div>
+
+<h3>③ 看到“相同乘数”——想分配律</h3>
+<p>例如：</p><div class="formula">14×39＋39×86</div>
+<p>两个乘积中都有相同的因数39，所以可以写成：</p>
+<div class="formula">39×(14＋86)＝39×100＝3900</div>
+<p>如果中间是减号，也可以使用分配律。例如：</p>
+<div class="formula">59×178－78×59＝59×(178－78)</div>
+<div class="key">判断关键：先找两个乘积中有没有相同的因数。</div>
+
+<h3>④ 看到“接近整百的数”——拆开后用分配律</h3>
+<p>例如：</p><div class="formula">99×297</div>
+<p>因为99＝100－1，所以可以写成：</p>
+<div class="formula">(100－1)×297</div>
+<p>又如：</p><div class="formula">216×102＝216×(100＋2)</div>
+<div class="key">判断关键：如果一个因数很接近整十、整百或整千，可以考虑把它写成“整十、整百、整千 ± 一个较小的数”。</div>
+
+<h3>⑤ 简便计算前先问三个问题</h3>
+<p><strong>第一，看能不能换位置。</strong></p>
+<p><strong>第二，看能不能凑整。</strong></p>
+<p><strong>第三，看有没有相同因数，或接近整十、整百、整千的数。</strong></p>
+<p>选择运算定律以后，还必须保证：<strong>算式改变了形式，但数值没有改变。</strong></p>
+</section>
+
+<section id="s4">
+<h2>4. 快速自测</h2>
+<p class="note">先独立判断，答案与解析统一放在第7项。</p>
+<div class="quiz">1. 35＋48＝48＋35 使用了加法交换律。（　　）</div>
+<div class="quiz">2. 6×(20＋5)＝6×20＋5 符合分配律。（　　）</div>
+<div class="quiz">3. 计算 25×17×4 时，可以先计算 25×4。（　　）</div>
+<div class="quiz">4. 减法也满足交换律，所以 80－35＝35－80。（　　）</div>
+<div class="quiz">5. 计算 98×46 时，可以把98写成 100－2，再利用分配律简算。（　　）</div>
+</section>
+
+<section id="s5">
+<h2>5. 考试常考</h2>
+
+<h3>题型1：判断所使用的运算定律</h3>
+<p><strong>题目：</strong><br>指出下列等式主要使用了哪一种运算定律：<br>
+① 36＋57＝57＋36<br>
+② (8×25)×4＝8×(25×4)<br>
+③ 7×(40＋3)＝7×40＋7×3</p>
+<div class="answer"><strong>答案：</strong><br>① 加法交换律<br>② 乘法结合律<br>③ 分配律</div>
+
+<h3>题型2：利用交换律和结合律凑整简算</h3>
+<p><strong>题目：</strong>计算：25×37×4</p>
+<div class="answer"><strong>答案：</strong>3700</div>
+
+<h3>题型3：利用相同因数和分配律简算</h3>
+<p><strong>题目：</strong>计算：27×64＋73×64</p>
+<div class="answer"><strong>答案：</strong>6400</div>
+
+<h3>题型4：拆分接近整百的数进行简算</h3>
+<p><strong>题目：</strong>计算：298×99</p>
+<div class="answer"><strong>答案：</strong>29 502</div>
+
+<a class="detail" href="1.3_四则运算三大定律_常考题详细解题步骤.html">查看以上常考题的详细解题步骤 →</a>
+</section>
+
+<section id="s6">
+<h2>6. 一句话总结</h2>
+<div class="summary">简便计算要先观察结构：能换位置用交换律，能凑整用结合律，有相同因数或接近整百的数时考虑分配律。</div>
+</section>
+
+<section id="s7">
+<h2>7. 快速自测答案与解析</h2>
+
+<h3>1. 35＋48＝48＋35 使用了加法交换律。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：只是交换了两个加数的位置，和不变。</div>
+
+<h3>2. 6×(20＋5)＝6×20＋5 符合分配律。（　　）</h3>
+<div class="answer"><strong>答案：错误</strong><br>解析：6要分别乘括号里的20和5，右边应为6×20＋6×5。</div>
+
+<h3>3. 计算 25×17×4 时，可以先计算 25×4。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：利用乘法交换律和结合律，可以先算25×4＝100。</div>
+
+<h3>4. 减法也满足交换律，所以 80－35＝35－80。（　　）</h3>
+<div class="answer"><strong>答案：错误</strong><br>解析：减法不满足交换律，不能任意交换被减数和减数的位置。</div>
+
+<h3>5. 计算 98×46 时，可以把98写成 100－2，再利用分配律简算。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：98接近100，写成100－2后可以利用分配律简化计算。</div>
+</section>
+</main>
+</body>
+</html>
