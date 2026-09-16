@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.4 应用问题｜基础版</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#1f2937;--muted:#5f6b7a;--line:#dfe5ee;--accent:#2457a6;--soft:#eef4ff}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;line-height:1.75}
+header{background:#fff;border-bottom:1px solid var(--line);padding:30px 20px 24px}.wrap,main{max-width:920px;margin:auto}
+h1{margin:0;font-size:clamp(28px,5vw,42px)}.subtitle,.note{color:var(--muted)}
+nav{position:sticky;top:0;z-index:10;background:#fffffff5;border-bottom:1px solid var(--line);overflow-x:auto}
+nav .wrap{padding:8px 12px;display:flex;gap:8px;min-width:max-content}nav a{padding:9px 12px;color:var(--accent);background:var(--soft);border:1px solid #b9c9e4;border-radius:9px;text-decoration:none;font-size:14px;font-weight:700;white-space:nowrap}
+main{padding:22px 16px 56px}section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px;overflow-wrap:anywhere}
+h2{color:#173f78;margin:0 0 14px}h3{margin:20px 0 8px}.key{margin:14px 0;padding:12px 15px;border-left:4px solid var(--accent);background:var(--soft);border-radius:8px;font-weight:700}
+.formula{margin:12px 0;padding:10px 14px;text-align:center;background:#f8fafc;border:1px solid var(--line);border-radius:9px;font-weight:700;overflow-x:auto}
+.quiz{padding:11px 0;border-bottom:1px dashed var(--line);font-weight:600}.answer{padding:13px 15px;background:#f8fafc;border-radius:9px;margin:8px 0 14px}
+.summary{text-align:center;font-size:20px;font-weight:800;padding:18px;background:var(--soft);border-radius:10px}.detail{display:block;text-align:center;margin-top:24px;padding:14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800}
+ul{padding-left:1.4em}.visual{margin:18px 0;padding:15px;border:1px solid var(--line);border-radius:12px;background:#fbfcfe}.visual-title{text-align:center;font-weight:800;margin-bottom:12px}
+.motion-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.motion{border:1px solid var(--line);border-radius:10px;padding:12px;text-align:center;background:#fff}
+.teach-svg{display:block;width:100%;height:auto;max-height:105px;margin:5px auto}.teach-svg text{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;fill:#1f2937;font-size:13px}.teach-svg line,.teach-svg path{stroke:#2457a6;stroke-width:3;fill:none}.teach-svg polygon{fill:#2457a6}
+@media(max-width:700px){.motion-grid{grid-template-columns:1fr}.motion{max-width:420px;width:100%;margin:auto}}
+@media(max-width:600px){section{padding:17px}h1{font-size:30px}.summary{font-size:18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>1.4 应用问题</h1><div class="subtitle">基础版｜数量关系 → 平均数 → 行程问题</div></div></header>
+<nav><div class="wrap"><a href="#s1">1. 是什么？</a><a href="#s2">2. 有什么作用？</a><a href="#s3">3. 怎么做？</a><a href="#s4">4. 快速自测</a><a href="#s5">5. 考试常考</a><a href="#s6">6. 一句话总结</a><a href="#s7">7. 答案与解析</a></div></nav>
+<main>
+<section id="s1"><h2>1. 是什么？</h2>
+<p>应用问题，就是把实际情境中的数量关系转化为完整数的加、减、乘、除运算来解决。</p>
+<div class="key">已知什么 → 求什么 → 数量之间有什么关系 → 应该用什么运算。</div>
+<h3>① 一般数量关系</h3><div class="formula">单位量 × 数量 ＝ 总量</div>
+<p>例如，每小时完成48个单位的工作，5小时完成：48×5＝240。</p>
+<p>有些问题需要根据“总量、差、剩余、收入、支出”等关系，连续使用几种运算。</p>
+<h3>② 平均数</h3><p>一组数的总和除以这组数的个数，所得的商叫做这组数的<strong>平均数</strong>。</p>
+<div class="formula">平均数 ＝ 总和 ÷ 个数</div><div class="formula">总和 ＝ 平均数 × 个数</div>
+<p>所以，看到“平均”不能只看几个数的大小，而要先找<strong>总和</strong>和<strong>个数</strong>。</p>
+<h3>③ 行程问题</h3><p>行程问题中有三个基本数量：<strong>距离、速度、时间。</strong></p>
+<div class="formula">距离 ＝ 速度 × 时间</div><div class="formula">速度 ＝ 距离 ÷ 时间</div><div class="formula">时间 ＝ 距离 ÷ 速度</div>
+<p>如果一段行程分成几个阶段，还要分别找出各段的距离和时间。</p>
+<div class="formula">平均速度 ＝ 总路程 ÷ 总时间</div>
+<p>不能一般地把两个速度直接相加再除以2。</p>
+</section>
+
+<section id="s2"><h2>2. 有什么作用？</h2><p>掌握应用问题，可以帮助我们把实际问题中的文字条件整理成清楚的数量关系，并用完整数四则运算求出结果。</p>
+<ul><li>单位量、数量和总量之间的问题；</li><li>多个数量之间的加、减、乘、除关系；</li><li>平均数及平均数变化问题；</li><li>两组数据合并后的平均数；</li><li>距离、速度、时间问题；</li><li>分段或往返行程问题；</li><li>同向、相向、相背运动问题；</li><li>行程中的单位换算。</li></ul>
+<div class="key">先认数量结构，再选择运算。</div></section>
+
+<section id="s3"><h2>3. 怎么做？</h2>
+<h3>① 第一步：找已知量和所求量</h3><p>先问自己：<strong>题目给了什么？最后要求什么？</strong>不要看到数字就马上计算。</p>
+<p>例如：每位工人每天生产4件产品，12位工人工作120天。要求总产量，就要把每人每天的数量、人数、天数联系起来。</p><div class="formula">4×12×120</div>
+<h3>② 第二步：判断数量关系</h3><ul><li>求合起来有多少 → 想加法；</li><li>求相差多少、剩下多少 → 想减法；</li><li>求若干个相同数量的总量 → 想乘法；</li><li>求平均分、每份多少、包含几份 → 想除法。</li></ul>
+<p>一道题可能需要连续使用两种或更多运算。</p>
+<h3>③ 求平均数：先求总和，再除以个数</h3><p>例如，4个数据是72，78，75，79。</p><div class="formula">72＋78＋75＋79＝304</div><div class="formula">304÷4＝76</div>
+<div class="key">全部数据 → 求总和 → 除以数据个数。</div>
+<h3>④ 已知原平均数：先还原原来的总量</h3><p>例如，20人的平均年龄是13岁，原来的总年龄是：</p><div class="formula">13×20＝260</div>
+<p>如果后来加入或移除一些人，应先调整总年龄和总人数，再重新求平均数。</p>
+<div class="key">原平均数×原人数 → 原总量 → 调整总量和人数 → 新平均数。</div>
+<h3>⑤ 合并两组平均数：不能直接平均两个平均数</h3><p>例如：甲组10人，平均成绩70分；乙组20人，平均成绩80分。</p>
+<div class="formula">70×10＝700　　80×20＝1600</div><div class="formula">总分：700＋1600＝2300　　总人数：10＋20＝30</div>
+<div class="key">平均数不同、人数也不同时，不能直接把两个平均数相加再除以2。</div>
+<h3>⑥ 行程问题：先确定要求哪一个量</h3><ul><li>求距离 → 速度×时间；</li><li>求速度 → 距离÷时间；</li><li>求时间 → 距离÷速度。</li></ul>
+<p>例如，两地相距450 km，汽车平均速度为50 km/h：</p><div class="formula">450÷50＝9</div><p>所以需要9小时。</p>
+<h3>⑦ 行程中单位不同：先统一单位</h3><p>如果速度是km/h，而题目要求m/s，就要同时处理距离单位和时间单位。</p>
+<div class="formula">90 km＝90 000 m　　1 h＝3600 s</div><div class="formula">90 km/h＝25 m/s</div>
+<h3>⑧ 分段或往返求平均速度：找总路程和总时间</h3><div class="formula">平均速度 ＝ 总路程 ÷ 总时间</div>
+<div class="key">每段路程 → 每段时间 → 总路程 → 总时间 → 平均速度。</div>
+<h3>⑨ 两个物体运动：先判断方向</h3>
+<p><strong>同向：</strong>两者从同一点向同一方向运动，经过相同时间后，两者之间的距离通常看较快者路程－较慢者路程。</p>
+<p><strong>相向：</strong>两者从不同地点面对面运动，直到相遇，两者走过的路程之和＝原来的距离。</p>
+<p><strong>相背：</strong>两者向相反方向运动，经过一段时间后，两者之间的距离＝两者路程相加。</p>
+<div class="visual">
+<div class="visual-title">同向、相向、相背运动方向示意图</div>
+<div class="motion-grid">
+<div class="motion"><strong>同向：看路程差</strong>
+<svg class="teach-svg" viewBox="0 0 260 90" role="img" aria-label="同向运动示意图">
+<text x="20" y="22">甲、乙同点出发</text><line x1="28" y1="55" x2="215" y2="55"/><polygon points="215,55 198,46 198,64"/><text x="42" y="82">较快路程 − 较慢路程</text>
+</svg></div>
+<div class="motion"><strong>相向：看路程和</strong>
+<svg class="teach-svg" viewBox="0 0 260 90" role="img" aria-label="相向运动示意图">
+<text x="14" y="22">甲</text><text x="235" y="22">乙</text><line x1="28" y1="55" x2="122" y2="55"/><polygon points="122,55 105,46 105,64"/><line x1="232" y1="55" x2="138" y2="55"/><polygon points="138,55 155,46 155,64"/><text x="85" y="82">相遇：路程相加</text>
+</svg></div>
+<div class="motion"><strong>相背：看路程和</strong>
+<svg class="teach-svg" viewBox="0 0 260 90" role="img" aria-label="相背运动示意图">
+<text x="100" y="22">同点出发</text><line x1="122" y1="55" x2="30" y2="55"/><polygon points="30,55 47,46 47,64"/><line x1="138" y1="55" x2="230" y2="55"/><polygon points="230,55 213,46 213,64"/><text x="85" y="82">相距：路程相加</text>
+</svg></div>
+</div></div>
+</section>
+
+<section id="s4"><h2>4. 快速自测</h2><p class="note">先独立判断，答案与解析统一放在第7项。</p>
+<div class="quiz">1. 解决应用问题时，只要把题目中出现的所有数字直接进行运算，就能得到正确答案。（　　）</div>
+<div class="quiz">2. 一组数据的平均数等于这组数据的总和除以数据的个数。（　　）</div>
+<div class="quiz">3. 两组人数不同的数据合并时，可以直接把两组的平均数相加再除以2。（　　）</div>
+<div class="quiz">4. 一段往返行程去程和回程的速度不同，往返平均速度一定等于两个速度的平均数。（　　）</div>
+<div class="quiz">5. 两车同时相向而行直到相遇时，两车所走路程之和等于两地原来的距离。（　　）</div></section>
+
+<section id="s5"><h2>5. 考试常考</h2>
+<h3>题型1：根据单位量和数量求总量</h3><p><strong>题目：</strong>一台机器每小时生产36个零件，5台相同的机器连续工作8小时，共生产多少个零件？</p><div class="answer"><strong>答案：</strong>1440个</div>
+<h3>题型2：两量调剂后相等</h3><p><strong>题目：</strong>甲有RM46，乙有RM30。甲给乙多少RM后，两人的钱数相等？</p><div class="answer"><strong>答案：</strong>RM8</div>
+<h3>题型3：已知一组数据求平均数</h3><p><strong>题目：</strong>小明4次数学测验的成绩分别是72分、84分、76分和88分。求这4次测验的平均成绩。</p><div class="answer"><strong>答案：</strong>80分</div>
+<h3>题型4：已知原平均数和人数求变化后的平均数</h3><p><strong>题目：</strong>一个小组原有8名学生，平均年龄为12岁。后来加入2名学生，年龄分别为14岁和10岁。求现在10名学生的平均年龄。</p><div class="answer"><strong>答案：</strong>12岁</div>
+<h3>题型5：合并两组数据求总体平均数</h3><p><strong>题目：</strong>甲组有10名学生，平均成绩为72分；乙组有20名学生，平均成绩为78分。求两组合并后的平均成绩。</p><div class="answer"><strong>答案：</strong>76分</div>
+<h3>题型6：利用距离、速度、时间基本关系求未知量</h3><p><strong>题目：</strong>甲、乙两地相距360 km，一辆汽车以每小时60 km的速度从甲地驶往乙地。需要多少小时？</p><div class="answer"><strong>答案：</strong>6小时</div>
+<h3>题型7：速度单位换算</h3><p><strong>题目：</strong>一辆汽车的速度是72 km/h。这个速度相当于每秒多少米？</p><div class="answer"><strong>答案：</strong>20 m/s</div>
+<h3>题型8：分段或往返行程求平均速度</h3><p><strong>题目：</strong>某人从家到学校的路程是12 km。去学校时速度为6 km/h，返回时速度为4 km/h。求往返全程的平均速度。</p><div class="answer"><strong>答案：</strong>4.8 km/h</div>
+<h3>题型9：同向运动求相距</h3><p><strong>题目：</strong>甲、乙两人同时从同一地点向同一方向出发。甲每小时行6 km，乙每小时行4 km。3小时后两人相距多少千米？</p><div class="answer"><strong>答案：</strong>6 km</div>
+<h3>题型10：相向或相背运动</h3><p><strong>题目：</strong>甲、乙两车从相距390 km的两地同时相向而行。甲车速度为60 km/h，乙车速度为70 km/h。几小时后两车相遇？</p><div class="answer"><strong>答案：</strong>3小时</div>
+<a class="detail" href="1.4_应用问题_常考题详细解题步骤.html">查看以上常考题的详细解题步骤 →</a>
+</section>
+
+<section id="s6"><h2>6. 一句话总结</h2><div class="summary">完整数应用问题的关键是先找数量关系再计算：平均数抓“总和÷个数”，行程抓“距离、速度、时间”，多物体运动还要先判断方向和路程的加减关系。</div></section>
+
+<section id="s7"><h2>7. 快速自测答案与解析</h2>
+<h3>1. 解决应用问题时，只要把题目中出现的所有数字直接进行运算，就能得到正确答案。（　　）</h3><div class="answer"><strong>答案：错误</strong><br>解析：必须先确定已知量、所求量和数量关系，再选择运算。</div>
+<h3>2. 一组数据的平均数等于这组数据的总和除以数据的个数。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：平均数＝总和÷个数。</div>
+<h3>3. 两组人数不同的数据合并时，可以直接把两组的平均数相加再除以2。（　　）</h3><div class="answer"><strong>答案：错误</strong><br>解析：应先根据各组平均数和人数求出各组总量，再求总体平均数。</div>
+<h3>4. 一段往返行程去程和回程的速度不同，往返平均速度一定等于两个速度的平均数。（　　）</h3><div class="answer"><strong>答案：错误</strong><br>解析：往返平均速度应按“总路程÷总时间”计算。</div>
+<h3>5. 两车同时相向而行直到相遇时，两车所走路程之和等于两地原来的距离。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：相遇时两车共同走完两地之间的全部路程。</div>
+</section>
+</main></body></html>
