@@ -1,0 +1,64 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.8 自然数的可除性｜基础版</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#1f2937;--muted:#5f6b7a;--line:#dfe5ee;--accent:#2457a6;--soft:#eef4ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;line-height:1.75}
+.wrap,main{max-width:920px;margin:auto}header{background:#fff;border-bottom:1px solid var(--line);padding:30px 20px 24px}h1{margin:0;font-size:clamp(28px,5vw,42px)}.subtitle,.note{color:var(--muted)}
+nav{position:sticky;top:0;z-index:10;background:#fffffff5;border-bottom:1px solid var(--line);overflow-x:auto}nav .wrap{padding:8px 12px;display:flex;gap:8px;min-width:max-content}
+nav a{padding:9px 12px;color:var(--accent);background:var(--soft);border:1px solid #b9c9e4;border-radius:9px;text-decoration:none;font-size:14px;font-weight:700;white-space:nowrap}
+main{padding:22px 16px 56px}section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px;overflow-wrap:anywhere}
+h2{color:#173f78;margin:0 0 14px}h3{margin:20px 0 8px}.key{margin:14px 0;padding:12px 15px;border-left:4px solid var(--accent);background:var(--soft);border-radius:8px;font-weight:700}
+.formula{margin:12px 0;padding:10px 14px;text-align:center;background:#f8fafc;border:1px solid var(--line);border-radius:9px;font-weight:700;overflow-x:auto}
+.table-wrap{overflow-x:auto;margin:14px 0}table{width:100%;border-collapse:collapse;min-width:590px;background:#fff}th,td{border:1px solid var(--line);padding:10px 12px;text-align:left}th{background:var(--soft);color:#173f78}
+.quiz{padding:11px 0;border-bottom:1px dashed var(--line);font-weight:600}.answer{padding:13px 15px;background:#f8fafc;border-radius:9px;margin:8px 0 14px}
+.summary{text-align:center;font-size:20px;font-weight:800;padding:18px;background:var(--soft);border-radius:10px}.detail{display:block;text-align:center;margin-top:24px;padding:14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800}
+ul{padding-left:1.4em}@media(max-width:600px){section{padding:17px}h1{font-size:30px}.summary{font-size:18px}th,td{padding:9px}}
+</style></head><body>
+<header><div class="wrap"><h1>2.8 自然数的可除性</h1><div class="subtitle">基础版｜找对检验位置 → 使用对应规则 → 同时核对附加条件</div></div></header>
+<nav><div class="wrap"><a href="#s1">1. 是什么？</a><a href="#s2">2. 有什么作用？</a><a href="#s3">3. 怎么判断 / 怎么做？</a><a href="#s4">4. 快速自测</a><a href="#s5">5. 考试常考</a><a href="#s6">6. 一句话总结</a><a href="#s7">7. 答案与解析</a></div></nav>
+<main>
+<section id="s1"><h2>1. 是什么？</h2>
+<p>判断一个自然数能不能被另一个自然数整除，有时不需要真的做除法，只要观察这个数的某些数位，就可以快速判断。</p>
+<p>本节学习被 <strong>2、3、4、5、8、9、11</strong> 整除的检验法。</p>
+<div class="table-wrap"><table><thead><tr><th>除数</th><th>可除性检验法</th></tr></thead><tbody>
+<tr><td>2</td><td>个位数字是0、2、4、6、8</td></tr><tr><td>3</td><td>各位数字之和能被3整除</td></tr><tr><td>4</td><td>最后两位组成的数能被4整除</td></tr><tr><td>5</td><td>个位数字是0或5</td></tr><tr><td>8</td><td>最后三位组成的数能被8整除</td></tr><tr><td>9</td><td>各位数字之和能被9整除</td></tr><tr><td>11</td><td>奇数位数字之和与偶数位数字之和的差能被11整除</td></tr>
+</tbody></table></div>
+<p>例如3960：个位是0，所以能被2和5整除；各位数字之和为18，所以能被3和9整除；最后两位60能被4整除；最后三位960能被8整除。</p>
+</section>
+
+<section id="s2"><h2>2. 有什么作用？</h2><ul>
+<li>快速判断一个自然数能否被指定的数整除；</li><li>判断一个自然数同时能被哪些数整除；</li><li>根据整除条件确定缺少的数字；</li><li>同时利用多个整除条件确定数字；</li><li>按照整除条件组成最大的或最小的自然数。</li></ul>
+<div class="key">先看除数是谁 → 找对应的检验位置 → 按规则判断。</div></section>
+
+<section id="s3"><h2>3. 怎么判断 / 怎么做？</h2>
+<h3>① 被2或5整除——看个位</h3><p>被2整除：个位是0、2、4、6、8；被5整除：个位是0或5。</p><div class="formula">1480的个位是0，所以1480既能被2整除，也能被5整除。</div>
+<h3>② 被3或9整除——看各位数字之和</h3><div class="formula">539187：5＋3＋9＋1＋8＋7＝33<br><strong>能被3整除，不能被9整除。</strong></div>
+<h3>③ 被4整除——看最后两位</h3><div class="formula">1204的最后两位是04＝4<br><strong>1204能被4整除。</strong></div><p>判断时不需要检查前面的数字。</p>
+<h3>④ 被8整除——看最后三位</h3><div class="formula">7632的最后三位是632<br>632÷8＝79<br><strong>7632能被8整除。</strong></div>
+<h3>⑤ 被11整除——看奇数位数字和与偶数位数字和的差</h3><p>判断10923。从个位开始交替分成奇数位和偶数位：</p><div class="formula">奇数位数字之和：3＋9＋1＝13<br>偶数位数字之和：2＋0＝2<br>13－2＝11<br><strong>10923能被11整除。</strong></div>
+<h3>⑥ 填数字时，把未知数字放进对应规则</h3><p>在47□中填数字，使这个三位数能被3整除。设方框中的数字为 x：</p><div class="formula">4＋7＋x＝11＋x<br>x＝1，4，7</div><p>如果要求填最小数字，答案是<strong>1</strong>。</p>
+<h3>⑦ 同时满足多个整除条件，要逐个检查</h3><p>一个自然数要能被6整除，需要同时满足：<strong>能被2整除＋能被3整除</strong>。</p><p>例如1469□要能被6整除，个位首先必须是偶数，同时：</p><div class="formula">1＋4＋6＋9＋□＝20＋□</div><p>还必须能被3整除。因此要同时检查两个条件。</p>
+<h3>⑧ 组成最大或最小自然数时，还要比较大小</h3><div class="key">数字使用条件＋不重复条件＋整除条件＋最大或最小条件。</div><p>不能只找到一个符合整除条件的数就停止，还要比较所有可能情况，确定真正的最大值或最小值。</p>
+</section>
+
+<section id="s4"><h2>4. 快速自测</h2><p class="note">先独立判断，答案与解析统一放在第7项。</p>
+<div class="quiz">1. 一个自然数的个位是0，它一定能被2和5整除。（　　）</div><div class="quiz">2. 判断一个自然数能否被4整除，只需看它的最后两位组成的数。（　　）</div><div class="quiz">3. 一个自然数各位数字之和能被9整除，这个自然数就能被9整除。（　　）</div><div class="quiz">4. 判断一个自然数能否被8整除，要看它的最后两位。（　　）</div><div class="quiz">5. 一个自然数能被6整除，只要它能被2整除或能被3整除即可。（　　）</div>
+</section>
+
+<section id="s5"><h2>5. 考试常考</h2>
+<h3>题型1：判断自然数的可除性</h3><p><strong>题目：</strong>判断3960能被下列哪些数整除：2、3、4、5、8、9、11。</p><div class="answer"><strong>答案：</strong>2、3、4、5、8、9、11</div>
+<h3>题型2：根据整除条件填数字</h3><p><strong>题目：</strong>在53□7的方框中填入最小的数字，使所得自然数能被9整除。</p><div class="answer"><strong>答案：</strong>3</div>
+<h3>题型3：同时满足多个整除条件</h3><p><strong>题目：</strong>在235□的方框中填入最小的数字，使所得自然数能被6整除。</p><div class="answer"><strong>答案：</strong>2</div>
+<h3>题型4：组成满足整除条件的最大自然数</h3><p><strong>题目：</strong>用数字1、2、3、6各一次，组成一个能被8整除的最大四位数。</p><div class="answer"><strong>答案：</strong>6312</div>
+<a class="detail" href="2.8_自然数的可除性_常考题详细解题步骤.html">查看以上常考题的详细解题步骤 →</a>
+</section>
+
+<section id="s6"><h2>6. 一句话总结</h2><div class="summary">判断可除性要找对位置：2和5看个位，4看末两位，8看末三位，3和9看各位数字和，11看奇偶数位数字和之差；填数和组数时还要同时满足所有附加条件。</div></section>
+
+<section id="s7"><h2>7. 快速自测答案与解析</h2>
+<h3>1. 一个自然数的个位是0，它一定能被2和5整除。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：个位是0同时符合被2和被5整除的检验法。</div>
+<h3>2. 判断一个自然数能否被4整除，只需看它的最后两位组成的数。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：最后两位组成的数能被4整除，原数就能被4整除。</div>
+<h3>3. 一个自然数各位数字之和能被9整除，这个自然数就能被9整除。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：这正是被9整除的检验法。</div>
+<h3>4. 判断一个自然数能否被8整除，要看它的最后两位。（　　）</h3><div class="answer"><strong>答案：错误</strong><br>解析：被8整除要看最后三位组成的数。</div>
+<h3>5. 一个自然数能被6整除，只要它能被2整除或能被3整除即可。（　　）</h3><div class="answer"><strong>答案：错误</strong><br>解析：必须同时能被2和3整除。</div>
+</section></main></body></html>
