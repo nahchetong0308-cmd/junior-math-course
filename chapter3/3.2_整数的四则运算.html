@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3.2 整数的四则运算｜基础版</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#1f2937;--muted:#5f6b7a;--line:#dfe5ee;--accent:#2457a6;--soft:#eef4ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;line-height:1.75}
+.wrap,main{max-width:920px;margin:auto}
+header{background:#fff;border-bottom:1px solid var(--line);padding:30px 20px 24px}
+h1{margin:0;font-size:clamp(28px,5vw,42px)}
+.subtitle,.note,.caption{color:var(--muted)}
+nav{position:sticky;top:0;z-index:10;background:#fffffff5;border-bottom:1px solid var(--line);overflow-x:auto}
+nav .wrap{padding:8px 12px;display:flex;gap:8px;min-width:max-content}
+nav a{padding:9px 12px;color:var(--accent);background:var(--soft);border:1px solid #b9c9e4;border-radius:9px;text-decoration:none;font-size:14px;font-weight:700;white-space:nowrap}
+main{padding:22px 16px 56px}
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px;overflow-wrap:anywhere}
+h2{color:#173f78;margin:0 0 14px}h3{margin:20px 0 8px}
+.key{margin:14px 0;padding:12px 15px;border-left:4px solid var(--accent);background:var(--soft);border-radius:8px;font-weight:700}
+.formula{margin:12px 0;padding:10px 14px;text-align:center;background:#f8fafc;border:1px solid var(--line);border-radius:9px;font-weight:700;overflow-x:auto}
+.quiz{padding:11px 0;border-bottom:1px dashed var(--line);font-weight:600}
+.answer{padding:13px 15px;background:#f8fafc;border-radius:9px;margin:8px 0 14px}
+.summary{text-align:center;font-size:20px;font-weight:800;padding:18px;background:var(--soft);border-radius:10px}
+.detail{display:block;text-align:center;margin-top:24px;padding:14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800}
+.teach-figure{margin:18px auto;padding:14px;background:#f8fafc;border:1px solid var(--line);border-radius:12px;text-align:center;overflow-x:auto}
+.teach-svg{display:block;width:100%;max-width:720px;height:auto;margin:auto}
+.teach-svg text{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;fill:#1f2937}
+.caption{font-size:14px;margin-top:8px}
+ul{padding-left:1.4em}
+@media(max-width:600px){section{padding:17px}h1{font-size:30px}.summary{font-size:18px}.teach-figure{padding:8px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>3.2 整数的四则运算</h1>
+<div class="subtitle">基础版｜看清运算符号 → 确定结果符号 → 完成数值计算</div></div></header>
+
+<nav><div class="wrap">
+<a href="#s1">1. 是什么？</a><a href="#s2">2. 有什么作用？</a><a href="#s3">3. 怎么算 / 怎么做？</a>
+<a href="#s4">4. 快速自测</a><a href="#s5">5. 考试常考</a><a href="#s6">6. 一句话总结</a><a href="#s7">7. 答案与解析</a>
+</div></nav>
+
+<main>
+<section id="s1"><h2>1. 是什么？</h2>
+<p>整数的四则运算包括整数的<strong>加法、减法、乘法和除法</strong>。本节还学习整数的<strong>乘方</strong>。</p>
+<p>与自然数运算相比，整数运算增加了正、负号，因此计算时既要算出数值，还要正确确定结果的符号。</p>
+
+<h3>整数加法</h3>
+<p>在数轴上：加一个正数，相当于向右移动；加一个负数，相当于向左移动。</p>
+<div class="formula">(−3)＋5＝2<br>3＋(−5)＝−2</div>
+
+<h3>整数减法</h3>
+<p>在数轴上：减去一个正数，相当于向左移动；减去一个负数，相当于向右移动。</p>
+<div class="formula">＋(−a)＝−a<br>−(−a)＝＋a<br><br>2−(−5)＝7</div>
+
+<h3>整数乘法</h3>
+<div class="key">两个整数相乘：同号得正，异号得负。</div>
+<p>任何数与0相乘，积都是0。多个非零整数相乘：负因数有偶数个，积为正；负因数有奇数个，积为负。</p>
+
+<h3>整数乘方</h3>
+<div class="formula">(−3)<sup>2</sup>＝(−3)×(−3)＝9<br>(−3)<sup>3</sup>＝(−3)×(−3)×(−3)＝−27</div>
+<p>负数整体作为底数时：偶次方是正数；奇次方是负数。</p>
+
+<h3>整数除法</h3>
+<div class="key">整数除法的符号规律与乘法相同：同号得正，异号得负。</div>
+<div class="formula">(−20)÷2＝−10<br>(−10)÷(−2)＝5</div>
+<p>除数不能为0。</p>
+</section>
+
+<section id="s2"><h2>2. 有什么作用？</h2>
+<ul>
+<li>计算正、负整数的加减；</li>
+<li>完成连续的整数加减运算；</li>
+<li>计算两个或多个整数的乘积；</li>
+<li>判断多个负数相乘时积的符号；</li>
+<li>计算整数的乘方；</li>
+<li>区分负号是否属于乘方的底数；</li>
+<li>计算整数除法和连续除法。</li>
+</ul>
+<div class="key">看清运算符号 → 确定结果符号 → 完成数值计算。</div>
+</section>
+
+<section id="s3"><h2>3. 怎么算 / 怎么做？</h2>
+<h3>① 整数加法</h3>
+<p>例如：</p><div class="formula">(−3)＋5＝2</div>
+<p>从数轴上的−3开始，加5就是向右移动5个单位，得到2。</p>
+
+<figure class="teach-figure">
+<svg class="teach-svg" viewBox="0 0 720 190" role="img" aria-label="从负3向右移动5个单位到2的数轴">
+<defs><marker id="axisA" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2457a6"/></marker><marker id="moveA" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#52657d"/></marker></defs>
+<line x1="70" y1="110" x2="660" y2="110" stroke="#2457a6" stroke-width="3" marker-end="url(#axisA)"/>
+<g stroke="#52657d" stroke-width="2">
+<line x1="120" y1="99" x2="120" y2="121"/><line x1="200" y1="99" x2="200" y2="121"/><line x1="280" y1="99" x2="280" y2="121"/><line x1="360" y1="96" x2="360" y2="124"/><line x1="440" y1="99" x2="440" y2="121"/><line x1="520" y1="99" x2="520" y2="121"/><line x1="600" y1="99" x2="600" y2="121"/></g>
+<g font-size="18" text-anchor="middle"><text x="120" y="150">−3</text><text x="200" y="150">−2</text><text x="280" y="150">−1</text><text x="360" y="150">0</text><text x="440" y="150">1</text><text x="520" y="150">2</text><text x="600" y="150">3</text></g>
+<path d="M120,91 Q320,20 520,91" fill="none" stroke="#52657d" stroke-width="3" marker-end="url(#moveA)"/>
+<text x="320" y="42" font-size="18" text-anchor="middle">＋5：向右移动5个单位</text>
+</svg><div class="caption">从−3出发，加5，向右移动5个单位，到达2。</div></figure>
+
+<p>又如：</p><div class="formula">3＋(−5)＝−2</div>
+<p>从3开始，加−5就是向左移动5个单位。</p>
+
+<figure class="teach-figure">
+<svg class="teach-svg" viewBox="0 0 720 190" role="img" aria-label="从3向左移动5个单位到负2的数轴">
+<defs><marker id="axisB" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2457a6"/></marker><marker id="moveB" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#52657d"/></marker></defs>
+<line x1="70" y1="110" x2="660" y2="110" stroke="#2457a6" stroke-width="3" marker-end="url(#axisB)"/>
+<g stroke="#52657d" stroke-width="2">
+<line x1="120" y1="99" x2="120" y2="121"/><line x1="200" y1="99" x2="200" y2="121"/><line x1="280" y1="99" x2="280" y2="121"/><line x1="360" y1="96" x2="360" y2="124"/><line x1="440" y1="99" x2="440" y2="121"/><line x1="520" y1="99" x2="520" y2="121"/><line x1="600" y1="99" x2="600" y2="121"/></g>
+<g font-size="18" text-anchor="middle"><text x="120" y="150">−3</text><text x="200" y="150">−2</text><text x="280" y="150">−1</text><text x="360" y="150">0</text><text x="440" y="150">1</text><text x="520" y="150">2</text><text x="600" y="150">3</text></g>
+<path d="M600,91 Q400,20 200,91" fill="none" stroke="#52657d" stroke-width="3" marker-end="url(#moveB)"/>
+<text x="400" y="42" font-size="18" text-anchor="middle">＋(−5)：向左移动5个单位</text>
+</svg><div class="caption">从3出发，加−5，向左移动5个单位，到达−2。</div></figure>
+<div class="key">加正数向右，加负数向左。</div>
+
+<h3>② 整数减法</h3>
+<div class="formula">2−5＝−3<br>2−(−5)＝7</div>
+<p>减去5，就是从2向左移动5个单位；减去−5，相当于加5。</p>
+<div class="key">−(−a)＝＋a</div>
+<p>例如：</p><div class="formula">(−17)−10−(−5)<br>＝(−17)−10＋5<br>＝−22</div>
+
+<h3>③ 整数加减混合运算</h3>
+<div class="formula">8＋(−5)−(−4)<br>＝8−5＋4<br>＝7</div>
+<p>先看清每一个数前面的运算符号，再按顺序计算。</p>
+
+<h3>④ 两个整数相乘</h3>
+<div class="formula">(−25)×(−4)＝100<br>12×(−3)＝−36</div>
+<p>先判断同号还是异号，再计算数值部分。</p>
+
+<h3>⑤ 多个整数连乘</h3>
+<div class="formula">(−2)×3×(−4)×5＝120</div>
+<p>共有2个负因数，是偶数个，所以积为正。</p>
+<p>如果乘积中出现0：</p><div class="formula">−100×20×(−9)×0×(−3)＝0</div>
+
+<h3>⑥ 整数的乘方</h3>
+<div class="formula">(−5)<sup>3</sup>＝−125<br>(−5)<sup>4</sup>＝625</div>
+<div class="key">负数整体作为底数时：奇次方为负，偶次方为正。</div>
+<p>必须特别注意括号：</p>
+<div class="formula">(−4)<sup>2</sup>＝16<br>−4<sup>2</sup>＝−16<br><br>(−4)<sup>2</sup> ≠ −4<sup>2</sup></div>
+
+<h3>⑦ 整数除法</h3>
+<div class="formula">(−20)÷2＝−10<br>(−10)÷(−2)＝5</div>
+<p>连续除法按从左到右的顺序计算：</p>
+<div class="formula">(−180)÷(−3)÷30<br>＝60÷30<br>＝2</div>
+</section>
+
+<section id="s4"><h2>4. 快速自测</h2>
+<p class="note">先独立判断，答案与解析统一放在第7项。</p>
+<div class="quiz">1. 加一个负整数，在数轴上相当于向左移动。（　　）</div>
+<div class="quiz">2. 5−(−3)＝2。（　　）</div>
+<div class="quiz">3. 三个非零负整数相乘，积一定是负数。（　　）</div>
+<div class="quiz">4. (−6)<sup>2</sup>＝−36。（　　）</div>
+<div class="quiz">5. (−24)÷(−6)＝4。（　　）</div>
+</section>
+
+<section id="s5"><h2>5. 考试常考</h2>
+<h3>题型1：整数的加法</h3><p><strong>题目：</strong>计算：(−18)＋25</p><div class="answer"><strong>答案：</strong>7</div>
+<h3>题型2：整数的减法</h3><p><strong>题目：</strong>计算：(−12)−(−19)</p><div class="answer"><strong>答案：</strong>7</div>
+<h3>题型3：整数的加减混合运算</h3><p><strong>题目：</strong>计算：16＋(−25)−24＋(−32)</p><div class="answer"><strong>答案：</strong>−65</div>
+<h3>题型4：两个整数相乘</h3><p><strong>题目：</strong>计算：(−18)×7</p><div class="answer"><strong>答案：</strong>−126</div>
+<h3>题型5：多个整数连乘</h3><p><strong>题目：</strong>计算：(−3)×(−5)×2×(−4)</p><div class="answer"><strong>答案：</strong>−120</div>
+<h3>题型6：计算整数的乘方</h3><p><strong>题目：</strong>计算：(−6)<sup>3</sup></p><div class="answer"><strong>答案：</strong>−216</div>
+<h3>题型7：区分括号与负号对乘方的影响</h3><p><strong>题目：</strong>分别计算：① (−5)<sup>2</sup>　② −5<sup>2</sup></p><div class="answer"><strong>答案：</strong>① 25　② −25</div>
+<h3>题型8：含乘方的简单乘法计算</h3><p><strong>题目：</strong>计算：(−1)<sup>3</sup>×2×(−3)<sup>2</sup>×(−4)</p><div class="answer"><strong>答案：</strong>72</div>
+<h3>题型9：两个整数相除</h3><p><strong>题目：</strong>计算：(−84)÷12</p><div class="answer"><strong>答案：</strong>−7</div>
+<h3>题型10：连续整数除法</h3><p><strong>题目：</strong>计算：(−144)÷(−6)÷4</p><div class="answer"><strong>答案：</strong>6</div>
+<a class="detail" href="3.2_整数的四则运算_常考题详细解题步骤.html">查看以上常考题的详细解题步骤 →</a>
+</section>
+
+<section id="s6"><h2>6. 一句话总结</h2>
+<div class="summary">整数加减要看清运算符号，整数乘除先判断“同号得正、异号得负”，多个非零整数连乘先看负因数个数，整数乘方尤其要看清负号是否在括号内。</div>
+</section>
+
+<section id="s7"><h2>7. 快速自测答案与解析</h2>
+<h3>1. 加一个负整数，在数轴上相当于向左移动。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：加负数表示在数轴上向左移动相应的单位数。</div>
+<h3>2. 5−(−3)＝2。（　　）</h3><div class="answer"><strong>答案：错误</strong><br>解析：减去负数相当于加上相应的正数，所以5−(−3)＝8。</div>
+<h3>3. 三个非零负整数相乘，积一定是负数。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：3个负因数是奇数个，因此积为负数。</div>
+<h3>4. (−6)<sup>2</sup>＝−36。（　　）</h3><div class="answer"><strong>答案：错误</strong><br>解析：−6整体是底数，偶次方为正，所以(−6)<sup>2</sup>＝36。</div>
+<h3>5. (−24)÷(−6)＝4。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：两个整数同号相除，商为正。</div>
+</section>
+</main>
+</body></html>
