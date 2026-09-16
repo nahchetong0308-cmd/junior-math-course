@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.1 完整数与自然数的概念｜基础版</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#1f2937;--muted:#5f6b7a;--line:#dfe5ee;--accent:#2457a6;--soft:#eef4ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;line-height:1.75}
+header{background:#fff;border-bottom:1px solid var(--line);padding:30px 20px 24px}
+.wrap,main{max-width:920px;margin:auto}
+h1{margin:0;font-size:clamp(28px,5vw,42px)}
+.subtitle,.note{color:var(--muted)}
+nav{position:sticky;top:0;z-index:10;background:#fffffff5;border-bottom:1px solid var(--line);overflow-x:auto}
+nav .wrap{padding:8px 12px;display:flex;gap:8px;min-width:max-content}
+nav a{padding:9px 12px;color:var(--accent);background:var(--soft);border:1px solid #b9c9e4;border-radius:9px;text-decoration:none;font-size:14px;font-weight:700;white-space:nowrap}
+main{padding:22px 16px 56px}
+section{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px;overflow-wrap:anywhere}
+h2{color:#173f78;margin:0 0 14px}
+h3{margin:20px 0 8px}
+.key{margin:14px 0;padding:12px 15px;border-left:4px solid var(--accent);background:var(--soft);border-radius:8px;font-weight:700}
+.quiz{padding:11px 0;border-bottom:1px dashed var(--line);font-weight:600}
+.answer{padding:13px 15px;background:#f8fafc;border-radius:9px;margin:8px 0 14px}
+.summary{text-align:center;font-size:20px;font-weight:800;padding:18px;background:var(--soft);border-radius:10px}
+.detail{display:block;text-align:center;margin-top:24px;padding:14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800}
+.table-wrap{overflow-x:auto;margin:15px 0}
+table{width:100%;border-collapse:collapse;min-width:500px;background:#fff}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:center;white-space:nowrap}
+th{background:var(--soft);color:#173f78}
+.place-value{margin:16px 0;padding:14px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.place-value .title{text-align:center;font-weight:800;margin-bottom:10px}
+.place-grid{display:grid;grid-template-columns:repeat(7,minmax(88px,1fr));overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+.place-grid div{min-width:88px;padding:9px 6px;text-align:center;border-right:1px solid var(--line)}
+.place-grid div:last-child{border-right:0}
+.place-grid .head{background:var(--soft);font-weight:700;color:#173f78}
+.place-grid .digit{font-size:22px;font-weight:800}
+.num{white-space:nowrap;font-variant-numeric:tabular-nums}
+ul{padding-left:1.4em}
+@media(max-width:600px){
+  section{padding:17px}
+  h1{font-size:30px}
+  .summary{font-size:18px}
+  table{font-size:14px}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<h1>1.1 完整数与自然数的概念</h1>
+<div class="subtitle">基础版｜读写完整数 → 认识数位与数值 → 判断位数与N、W</div>
+</div>
+</header>
+
+<nav>
+<div class="wrap">
+<a href="#s1">1. 是什么？</a>
+<a href="#s2">2. 有什么作用？</a>
+<a href="#s3">3. 怎么判断 / 怎么做？</a>
+<a href="#s4">4. 快速自测</a>
+<a href="#s5">5. 考试常考</a>
+<a href="#s6">6. 一句话总结</a>
+<a href="#s7">7. 答案与解析</a>
+</div>
+</nav>
+
+<main>
+<section id="s1">
+<h2>1. 是什么？</h2>
+<p>我们平常写数，主要使用 <strong>0、1、2、3、4、5、6、7、8、9</strong> 这十个数字，并按照十进制记数。</p>
+<p>一个数中，每个数字所在的位置叫做它的<strong>数位</strong>。从右向左，数位依次是：</p>
+<div class="key">个位、十位、百位、千位、万位、十万位、百万位、千万位、亿位……</div>
+<p>同一个数字放在不同数位，表示的<strong>数值</strong>不同。</p>
+
+<p>例如，在 <strong class="num">3 765 419</strong> 中：</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>数字</th><th>数位</th><th>数值</th></tr></thead>
+<tbody>
+<tr><td>3</td><td>百万位</td><td>3 000 000</td></tr>
+<tr><td>7</td><td>十万位</td><td>700 000</td></tr>
+<tr><td>6</td><td>万位</td><td>60 000</td></tr>
+<tr><td>5</td><td>千位</td><td>5 000</td></tr>
+<tr><td>4</td><td>百位</td><td>400</td></tr>
+<tr><td>1</td><td>十位</td><td>10</td></tr>
+<tr><td>9</td><td>个位</td><td>9</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="place-value" role="img" aria-label="3 765 419的数位、数字与数值位值表">
+<div class="title">数位—数字—数值位值表</div>
+<div class="place-grid">
+<div class="head">百万位</div><div class="head">十万位</div><div class="head">万位</div><div class="head">千位</div><div class="head">百位</div><div class="head">十位</div><div class="head">个位</div>
+<div class="digit">3</div><div class="digit">7</div><div class="digit">6</div><div class="digit">5</div><div class="digit">4</div><div class="digit">1</div><div class="digit">9</div>
+<div>3 000 000</div><div>700 000</div><div>60 000</div><div>5 000</div><div>400</div><div>10</div><div>9</div>
+</div>
+</div>
+
+<div class="key">数位回答“在哪里”，数值回答“表示多少”。</div>
+
+<p>完整数可以依次写成：</p>
+<p><strong>0，1，2，3，4，5，6，……</strong></p>
+<p>本节还使用两个记号：</p>
+<ul>
+<li><strong>N：1，2，3，4，……</strong></li>
+<li><strong>W：0，1，2，3，4，……</strong></li>
+</ul>
+<p>也就是说，这里的 <strong>W包括0，N不包括0</strong>。</p>
+<p>一个数有几个数位，就是几位数。例如：</p>
+<ul>
+<li>7是一位数；</li>
+<li>35是二位数；</li>
+<li>608是三位数；</li>
+<li>5 214是四位数。</li>
+</ul>
+</section>
+
+<section id="s2">
+<h2>2. 有什么作用？</h2>
+<p>掌握完整数和自然数的概念，可以帮助我们：</p>
+<ul>
+<li>正确读出和写出较大的完整数；</li>
+<li>知道每个数字处在哪一个数位；</li>
+<li>确定一个数字在这个数中实际表示多少；</li>
+<li>判断一个数有几位；</li>
+<li>分清本节所用的自然数N和完整数W。</li>
+</ul>
+<p>这些知识也是以后进行完整数运算的基础。</p>
+</section>
+
+<section id="s3">
+<h2>3. 怎么判断 / 怎么做？</h2>
+
+<h3>① 数名写成数字</h3>
+<p>先确定最高数位，再按照数位顺序把数字写下来。</p>
+<p>没有数字的数位要用 <strong>0占位</strong>。</p>
+<p>例如：<strong>三万零五十二</strong></p>
+<ul>
+<li>3在万位；</li>
+<li>千位是0；</li>
+<li>百位是0；</li>
+<li>5在十位；</li>
+<li>2在个位。</li>
+</ul>
+<p>所以写成：<strong>30 052</strong></p>
+
+<h3>② 数字写成数名</h3>
+<p>从最高数位开始读，先判断每个数字所在的数位，再依次读出。</p>
+<p>例如：<strong>286 514</strong>，读作：<strong>二十八万六千五百一十四</strong>。</p>
+<p>遇到中间的0时，要特别注意它所占的数位，不能因为没有数值就把数位关系看错。</p>
+
+<h3>③ 判断数位和数值</h3>
+<p>先找这个数字<strong>在哪里</strong>，再判断它<strong>表示多少</strong>。</p>
+<p>例如，在 <strong>572 438</strong> 中，数字7：</p>
+<ul><li>在<strong>万位</strong>；</li><li>数值是 <strong>70 000</strong>。</li></ul>
+<div class="key">先定位，再定值。</div>
+
+<h3>④ 判断几位数</h3>
+<p>从最高位到个位数一数共有几个数位。</p>
+<p>例如：<strong>406 025</strong> 的最高位是十万位，共有6个数位，所以它是<strong>六位数</strong>。</p>
+
+<h3>⑤ 判断N和W中的数</h3>
+<p>按本节记号：</p>
+<ul><li>N：1，2，3，……</li><li>W：0，1，2，3，……</li></ul>
+<p>所以：<strong>0属于W，但不属于N。</strong></p>
+</section>
+
+<section id="s4">
+<h2>4. 快速自测</h2>
+<p class="note">先独立判断，答案与解析统一放在第7项。</p>
+<div class="quiz">1. 在数 <strong>638 415</strong> 中，数字8在千位。（　　）</div>
+<div class="quiz">2. 在数 <strong>724 306</strong> 中，数字4的数值是4 000。（　　）</div>
+<div class="quiz">3. <strong>50 007</strong> 是五位数。（　　）</div>
+<div class="quiz">4. <strong>0属于W，但不属于N。</strong>（　　）</div>
+<div class="quiz">5. “四万零六十”写成数字是 <strong>40 060</strong>。（　　）</div>
+</section>
+
+<section id="s5">
+<h2>5. 考试常考</h2>
+
+<h3>题型1：数名与数字互写</h3>
+<p><strong>题目：</strong><br>① 把“七十万零八百二十五”写成数字。<br>② 把 <strong>406 019</strong> 写成数名。</p>
+<div class="answer"><strong>答案：</strong><br>① 700 825<br>② 四十万六千零一十九</div>
+
+<h3>题型2：判断数字的数位和数值</h3>
+<p><strong>题目：</strong>在 <strong>5 284 731</strong> 中，数字8在哪一个数位？它的数值是多少？</p>
+<div class="answer"><strong>答案：</strong>十万位；800 000</div>
+
+<a class="detail" href="1.1_完整数与自然数的概念_常考题详细解题步骤.html">查看以上常考题的详细解题步骤 →</a>
+</section>
+
+<section id="s6">
+<h2>6. 一句话总结</h2>
+<div class="summary">读写完整数要看数位，判断一个数字时要分清“数位在哪里、数值是多少”，并记住本节W包括0，而N不包括0。</div>
+</section>
+
+<section id="s7">
+<h2>7. 快速自测答案与解析</h2>
+
+<h3>1. 在数 <strong>638 415</strong> 中，数字8在千位。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：8在千位，表示8 000。</div>
+
+<h3>2. 在数 <strong>724 306</strong> 中，数字4的数值是4 000。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：4在千位，所以数值是4 000。</div>
+
+<h3>3. <strong>50 007</strong> 是五位数。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：最高位是万位，共有5个数位。</div>
+
+<h3>4. <strong>0属于W，但不属于N。</strong>（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：本节中W从0开始，N从1开始。</div>
+
+<h3>5. “四万零六十”写成数字是 <strong>40 060</strong>。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：4在万位，6在十位，其余相应数位用0占位。</div>
+</section>
+</main>
+</body>
+</html>
