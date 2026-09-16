@@ -1,0 +1,71 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.6 公倍数与最小公倍数｜基础版</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#1f2937;--muted:#5f6b7a;--line:#dfe5ee;--accent:#2457a6;--soft:#eef4ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;line-height:1.75}
+.wrap,main{max-width:920px;margin:auto}header{background:#fff;border-bottom:1px solid var(--line);padding:30px 20px 24px}h1{margin:0;font-size:clamp(28px,5vw,42px)}.subtitle,.note{color:var(--muted)}
+nav{position:sticky;top:0;z-index:10;background:#fffffff5;border-bottom:1px solid var(--line);overflow-x:auto}nav .wrap{padding:8px 12px;display:flex;gap:8px;min-width:max-content}
+nav a{padding:9px 12px;color:var(--accent);background:var(--soft);border:1px solid #b9c9e4;border-radius:9px;text-decoration:none;font-size:14px;font-weight:700;white-space:nowrap}
+main{padding:22px 16px 56px}section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px;overflow-wrap:anywhere}
+h2{color:#173f78;margin:0 0 14px}h3{margin:20px 0 8px}.key{margin:14px 0;padding:12px 15px;border-left:4px solid var(--accent);background:var(--soft);border-radius:8px;font-weight:700}
+.formula{margin:12px 0;padding:10px 14px;text-align:center;background:#f8fafc;border:1px solid var(--line);border-radius:9px;font-weight:700;overflow-x:auto}
+.quiz{padding:11px 0;border-bottom:1px dashed var(--line);font-weight:600}.answer{padding:13px 15px;background:#f8fafc;border-radius:9px;margin:8px 0 14px}
+.summary{text-align:center;font-size:20px;font-weight:800;padding:18px;background:var(--soft);border-radius:10px}.detail{display:block;text-align:center;margin-top:24px;padding:14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800}
+ul{padding-left:1.4em}sup{font-size:.72em}@media(max-width:600px){section{padding:17px}h1{font-size:30px}.summary{font-size:18px}}
+</style></head><body>
+<header><div class="wrap"><h1>2.6 公倍数与最小公倍数</h1><div class="subtitle">基础版｜找公倍数 → 求最小公倍数 → 联系最大公因数</div></div></header>
+<nav><div class="wrap"><a href="#s1">1. 是什么？</a><a href="#s2">2. 有什么作用？</a><a href="#s3">3. 怎么算 / 怎么做？</a><a href="#s4">4. 快速自测</a><a href="#s5">5. 考试常考</a><a href="#s6">6. 一句话总结</a><a href="#s7">7. 答案与解析</a></div></nav>
+<main>
+<section id="s1"><h2>1. 是什么？</h2>
+<p>几个自然数如果有相同的倍数，这些相同的倍数叫做它们的<strong>公倍数</strong>。</p>
+<div class="formula">8的倍数：8，16，24，32，40，48，56，64，72，……<br>12的倍数：12，24，36，48，60，72，……</div>
+<p>8和12共同的倍数有24、48、72……，所以它们都是8和12的<strong>公倍数</strong>。</p>
+<p>其中最小的是24，因此：</p><div class="formula"><strong>8和12的最小公倍数是24</strong></div>
+<p>几个自然数的公倍数中最小的一个，叫做它们的<strong>最小公倍数</strong>。</p></section>
+
+<section id="s2"><h2>2. 有什么作用？</h2>
+<ul><li>找出几个自然数的公倍数；</li><li>求两个或多个自然数的最小公倍数；</li><li>根据已经写出的质因数形式求最小公倍数；</li><li>同时求几个自然数的最大公因数和最小公倍数；</li><li>利用两个自然数的最大公因数、最小公倍数和乘积之间的关系进行计算。</li></ul>
+<p>两个自然数 a，b 满足：</p><div class="key">最大公因数 × 最小公倍数 ＝ a × b</div></section>
+
+<section id="s3"><h2>3. 怎么算 / 怎么做？</h2>
+<h3>① 列出倍数求最小公倍数</h3><div class="formula">12的倍数：12，24，36，48，60，72，……<br>18的倍数：18，36，54，72，……<br><br><strong>最小公倍数＝36</strong></div>
+<div class="key">分别列倍数 → 找公倍数 → 取最小的一个。</div>
+
+<h3>② 用质因数分解求最小公倍数</h3><div class="formula">36＝2<sup>2</sup>×3<sup>2</sup><br>90＝2×3<sup>2</sup>×5<br><br><strong>最小公倍数＝2<sup>2</sup>×3<sup>2</sup>×5＝180</strong></div>
+<p>2取较大的指数2，3取较大的指数2，5也要保留。</p>
+<div class="key">包含各数所需要的全部质因数，同一质因数取出现的最大指数。</div>
+
+<h3>③ 用短除法求最小公倍数</h3><p>例如，求24、40、60的最小公倍数。短除时，可以依次用能够整除其中至少两个数的质数去除；不能被该质数整除的数保留下来。最后把各次除数和最后剩下的数相乘。</p>
+<div class="formula"><strong>24，40，60的最小公倍数是120</strong></div>
+
+<h3>④ 已知质因数形式时怎么求</h3><div class="formula">A＝2<sup>3</sup>×3<sup>2</sup>×5<br>B＝2<sup>2</sup>×3×7<br><br><strong>最小公倍数＝2<sup>3</sup>×3<sup>2</sup>×5×7＝2520</strong></div>
+
+<h3>⑤ 同时求最大公因数和最小公倍数</h3><div class="formula">28＝2<sup>2</sup>×7<br>40＝2<sup>3</sup>×5<br><br>最大公因数＝2<sup>2</sup>＝4<br>最小公倍数＝2<sup>3</sup>×5×7＝280</div>
+<p>求最大公因数时，取<strong>共同质因数的较小指数</strong>；求最小公倍数时，取<strong>全部需要的质因数及较大指数</strong>。</p>
+
+<h3>⑥ 利用两个自然数的乘积关系</h3><div class="formula">最大公因数 × 最小公倍数 ＝ 两个自然数的乘积<br><br>6 × 最小公倍数 ＝ 18 × 24<br><strong>最小公倍数＝72</strong></div>
+<div class="key">这个乘积关系用于两个自然数。</div></section>
+
+<section id="s4"><h2>4. 快速自测</h2><p class="note">先独立判断，答案与解析统一放在第7项。</p>
+<div class="quiz">1. 24既是8的倍数，也是12的倍数，所以24是8和12的公倍数。（　　）</div>
+<div class="quiz">2. 两个自然数的公倍数只有有限个。（　　）</div>
+<div class="quiz">3. 用质因数分解求最小公倍数时，同一个质因数要取出现的最大指数。（　　）</div>
+<div class="quiz">4. 18和24的最小公倍数是72。（　　）</div>
+<div class="quiz">5. 两个自然数的最大公因数与最小公倍数的乘积，等于这两个自然数的乘积。（　　）</div></section>
+
+<section id="s5"><h2>5. 考试常考</h2>
+<h3>题型1：求几个自然数的最小公倍数</h3><p><strong>题目：</strong>求24、36、60的最小公倍数。</p><div class="answer"><strong>答案：</strong>360</div>
+<h3>题型2：已知质因数形式求最小公倍数</h3><p><strong>题目：</strong>已知：</p><div class="formula">A＝2<sup>3</sup>×3<sup>2</sup>×5<br>B＝2<sup>2</sup>×3×5<sup>2</sup></div><p>求 A 和 B 的最小公倍数。</p><div class="answer"><strong>答案：</strong>1800</div>
+<h3>题型3：同时求最大公因数和最小公倍数</h3><p><strong>题目：</strong>求36和84的最大公因数及最小公倍数。</p><div class="answer"><strong>答案：</strong><br>最大公因数：12<br>最小公倍数：252</div>
+<h3>题型4：利用最大公因数与最小公倍数的关系求未知量</h3><p><strong>题目：</strong>两个自然数的最大公因数是6，最小公倍数是180，其中一个自然数是30，求另一个自然数。</p><div class="answer"><strong>答案：</strong>36</div>
+<a class="detail" href="2.6_公倍数与最小公倍数_常考题详细解题步骤.html">查看以上常考题的详细解题步骤 →</a></section>
+
+<section id="s6"><h2>6. 一句话总结</h2><div class="summary">求最小公倍数要包含各数所需要的全部质因数，同一质因数取最大指数；两个自然数还满足“最大公因数×最小公倍数＝两数乘积”。</div></section>
+
+<section id="s7"><h2>7. 快速自测答案与解析</h2>
+<h3>1. 24既是8的倍数，也是12的倍数，所以24是8和12的公倍数。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：24同时是8和12的倍数，所以是它们的公倍数。</div>
+<h3>2. 两个自然数的公倍数只有有限个。（　　）</h3><div class="answer"><strong>答案：错误</strong><br>解析：一个公倍数的整数倍仍然是公倍数，所以公倍数有无限多个。</div>
+<h3>3. 用质因数分解求最小公倍数时，同一个质因数要取出现的最大指数。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：这样才能包含各数所需要的全部质因数。</div>
+<h3>4. 18和24的最小公倍数是72。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：72是18和24共同倍数中最小的一个。</div>
+<h3>5. 两个自然数的最大公因数与最小公倍数的乘积，等于这两个自然数的乘积。（　　）</h3><div class="answer"><strong>答案：正确</strong><br>解析：这是两个自然数的最大公因数与最小公倍数之间的关系。</div>
+</section></main></body></html>
