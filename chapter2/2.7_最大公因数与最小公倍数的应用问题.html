@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.7 最大公因数与最小公倍数的应用问题｜基础版</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#1f2937;--muted:#5f6b7a;--line:#dfe5ee;--accent:#2457a6;--soft:#eef4ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;line-height:1.75}
+.wrap,main{max-width:920px;margin:auto}
+header{background:#fff;border-bottom:1px solid var(--line);padding:30px 20px 24px}
+h1{margin:0;font-size:clamp(27px,5vw,42px)}.subtitle,.note,.caption{color:var(--muted)}
+nav{position:sticky;top:0;z-index:10;background:#fffffff5;border-bottom:1px solid var(--line);overflow-x:auto}
+nav .wrap{padding:8px 12px;display:flex;gap:8px;min-width:max-content}
+nav a{padding:9px 12px;color:var(--accent);background:var(--soft);border:1px solid #b9c9e4;border-radius:9px;text-decoration:none;font-size:14px;font-weight:700;white-space:nowrap}
+main{padding:22px 16px 56px}
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px;overflow-wrap:anywhere}
+h2{color:#173f78;margin:0 0 14px}h3{margin:20px 0 8px}
+.key{margin:14px 0;padding:12px 15px;border-left:4px solid var(--accent);background:var(--soft);border-radius:8px;font-weight:700}
+.formula{margin:12px 0;padding:10px 14px;text-align:center;background:#f8fafc;border:1px solid var(--line);border-radius:9px;font-weight:700;overflow-x:auto}
+.quiz{padding:11px 0;border-bottom:1px dashed var(--line);font-weight:600}
+.answer{padding:13px 15px;background:#f8fafc;border-radius:9px;margin:8px 0 14px}
+.summary{text-align:center;font-size:20px;font-weight:800;padding:18px;background:var(--soft);border-radius:10px}
+.detail{display:block;text-align:center;margin-top:24px;padding:14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800}
+.teach-figure{margin:18px auto;padding:14px;background:#f8fafc;border:1px solid var(--line);border-radius:12px;text-align:center}
+.teach-svg{display:block;width:100%;max-width:620px;height:auto;margin:auto}
+.teach-svg text{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;fill:#1f2937}
+.caption{font-size:14px;margin-top:8px}
+ul{padding-left:1.4em}
+@media(max-width:600px){section{padding:17px}h1{font-size:29px}.summary{font-size:18px}.teach-figure{padding:9px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>2.7 最大公因数与最小公倍数的应用问题</h1>
+<div class="subtitle">基础版｜识别共同整除或共同倍数 → 选择最大公因数或最小公倍数 → 解决实际问题</div></div></header>
+
+<nav><div class="wrap">
+<a href="#s1">1. 是什么？</a><a href="#s2">2. 有什么作用？</a><a href="#s3">3. 怎么判断 / 怎么做？</a>
+<a href="#s4">4. 快速自测</a><a href="#s5">5. 考试常考</a><a href="#s6">6. 一句话总结</a><a href="#s7">7. 答案与解析</a>
+</div></nav>
+
+<main>
+<section id="s1"><h2>1. 是什么？</h2>
+<p>有些实际问题表面上是在讲<strong>分组、分配、剪裁、余数、周期或重复发生</strong>，实际上可以转化成最大公因数或最小公倍数问题。</p>
+<p>解决这类问题，最重要的不是一看到几个数就马上计算，而是先判断：</p>
+<div class="key">题目需要最大公因数，还是最小公倍数？</div>
+<h3>第一种：平均分、等长分、要求尽可能大</h3>
+<p>通常转化为求<strong>最大公因数</strong>。</p>
+<p>例如：几根不同长度的木条，都剪成同样长的小段，并且没有剩余，要求每段尽可能长。这里的小段长度必须同时是各长度的因数，又要求最大，所以求最大公因数。</p>
+<h3>第二种：多个周期再次同时发生、要求最早或最少</h3>
+<p>通常转化为求<strong>最小公倍数</strong>。</p>
+<p>例如：几件事情分别每隔6分钟、8分钟发生一次，现在同时发生，求最少经过多少分钟再次同时发生。所求时间必须同时是6和8的倍数，又要求最小，所以求最小公倍数。</p>
+</section>
+
+<section id="s2"><h2>2. 有什么作用？</h2>
+<p>本节主要解决：</p>
+<ul><li>等分、分组、剪裁中的“最大”问题；</li><li>多个周期再次同时发生的“最早”问题；</li><li>带余数条件的最大公因数问题；</li><li>带相同余数条件的最小公倍数问题；</li><li>根据最大公因数或最小公倍数的条件反求自然数；</li><li>正方形拼成长方形等可以转化成最小公倍数的问题。</li></ul>
+<div class="key">先理解“共同满足什么条件”，再判断求最大公因数还是最小公倍数。</div>
+</section>
+
+<section id="s3"><h2>3. 怎么判断 / 怎么做？</h2>
+<h3>① 等分且要求“最大”——想最大公因数</h3>
+<p>有三根木条，长度分别为18 m、27 m、36 m，把它们全部剪成长度相同且尽可能长的小段，没有剩余。</p>
+<div class="formula">HCF(18，27，36)＝9<br><strong>每段最长9 m</strong></div>
+<div class="key">等分＋没有剩余＋每份尽可能大 → 最大公因数。</div>
+
+<h3>② 周期再次同时发生——想最小公倍数</h3>
+<p>三项活动分别每隔12分钟、18分钟和24分钟进行一次。现在三项活动同时进行，求最少经过多少分钟再次同时进行。</p>
+<div class="formula">LCM(12，18，24)＝72<br><strong>最少经过72分钟</strong></div>
+<div class="key">同时开始＋不同周期＋再次同时＋最早 → 最小公倍数。</div>
+
+<h3>③ 除后余数不同，先减去各自余数</h3>
+<p>一个自然数除207余7，除280余5，求这个自然数可能的最大值。</p>
+<div class="formula">207－7＝200<br>280－5＝275<br>HCF(200，275)＝25<br><strong>最大值是25</strong></div>
+<div class="key">“一个数去除几个数，各有余数” → 被除数分别减去余数 → 转化成公因数问题。</div>
+
+<h3>④ 除以几个数都余相同的数——先减共同余数</h3>
+<p>求一个最小自然数，使它除以8、12、20都余3。</p>
+<div class="formula">LCM(8，12，20)＝120<br>N＝120＋3＝123<br><strong>最小自然数是123</strong></div>
+<div class="key">一个数除以几个数都余相同的数 → 先减共同余数 → 转化成公倍数问题。</div>
+
+<h3>⑤ 根据最大公因数或最小公倍数反求自然数</h3>
+<p>两个自然数的最大公因数是6，最小公倍数是72，其中一个数是18，求另一个数。</p>
+<div class="formula">6×72＝18×另一个数<br><strong>另一个数＝24</strong></div>
+
+<h3>⑥ 用相同的最小正方形拼成长方形</h3>
+<p>如果用同样大小的正方形拼成一个长方形，并要求正方形尽可能大或长方形边长满足共同倍数条件，要先看题目究竟在求什么。</p>
+<p>例如，要用边长相同的正方形无空隙地铺满一个长60 cm、宽48 cm的长方形，并要求正方形边长尽可能大。</p>
+<div class="formula">HCF(60，48)＝12<br><strong>最大的正方形边长是12 cm</strong></div>
+<figure class="teach-figure">
+<svg class="teach-svg" viewBox="0 0 600 360" role="img" aria-labelledby="figtitle figdesc">
+<title id="figtitle">60厘米乘48厘米长方形用边长12厘米正方形铺满示意图</title>
+<desc id="figdesc">长方形横向分成5格，纵向分成4格，每格代表边长12厘米的正方形。</desc>
+<rect x="80" y="55" width="400" height="256" fill="#fff" stroke="#2457a6" stroke-width="3"/>
+<g stroke="#9aa9bd" stroke-width="1.5">
+<line x1="160" y1="55" x2="160" y2="311"/><line x1="240" y1="55" x2="240" y2="311"/>
+<line x1="320" y1="55" x2="320" y2="311"/><line x1="400" y1="55" x2="400" y2="311"/>
+<line x1="80" y1="119" x2="480" y2="119"/><line x1="80" y1="183" x2="480" y2="183"/>
+<line x1="80" y1="247" x2="480" y2="247"/>
+</g>
+<text x="280" y="35" text-anchor="middle" font-size="18">60 cm</text>
+<text x="40" y="188" text-anchor="middle" font-size="18" transform="rotate(-90 40 188)">48 cm</text>
+<text x="120" y="93" text-anchor="middle" font-size="15">12 cm</text>
+</svg>
+<div class="caption">结构示意：60÷12＝5，48÷12＝4，因此可以无空隙铺满。</div>
+</figure>
+<div class="key">关键不是看到“正方形”就固定使用某一种方法，而是看所求数量需要同时整除几个数，还是需要同时成为几个数的倍数。</div>
+</section>
+
+<section id="s4"><h2>4. 快速自测</h2><p class="note">先独立判断，答案与解析统一放在第7项。</p>
+<div class="quiz">1. 把几根不同长度的绳子剪成同样长且尽可能长的小段，没有剩余，通常要用最大公因数。（　　）</div>
+<div class="quiz">2. 两件事情分别每隔8分钟和12分钟发生一次，同时开始后求最早再次同时发生的时间，通常要用最小公倍数。（　　）</div>
+<div class="quiz">3. 一个自然数除203余3，除308余8，要研究这个除数，可以先研究200和300的公因数。（　　）</div>
+<div class="quiz">4. 一个数除以6、8、10都余2，可以先把这个数减去2，再研究6、8、10的公倍数。（　　）</div>
+<div class="quiz">5. 应用题中只要出现“最大”两个字，就一定求最大公因数。（　　）</div>
+</section>
+
+<section id="s5"><h2>5. 考试常考</h2>
+<h3>题型1：等分、分组中的最大公因数问题</h3>
+<p><strong>题目：</strong>有48个苹果、60个橙和72个梨，平均分给若干名学生，使每名学生所得的苹果数相同、橙数相同、梨数也相同，并且全部分完。最多可以分给多少名学生？</p>
+<div class="answer"><strong>答案：</strong>12名</div>
+
+<h3>题型2：周期再次同时发生的最小公倍数问题</h3>
+<p><strong>题目：</strong>甲、乙、丙三人分别每隔12天、18天和30天回到同一地点一次。今天三人同时在这里，至少再过多少天三人又同时在这里？</p>
+<div class="answer"><strong>答案：</strong>180天</div>
+
+<h3>题型3：不同余数条件转化为最大公因数问题</h3>
+<p><strong>题目：</strong>一个自然数除253余3，除368余8。这个自然数最大是多少？</p>
+<div class="answer"><strong>答案：</strong>10</div>
+
+<h3>题型4：相同余数条件转化为最小公倍数问题</h3>
+<p><strong>题目：</strong>求最小的自然数，使它除以12、15、20都余4。</p>
+<div class="answer"><strong>答案：</strong>64</div>
+
+<h3>题型5：已知最大公因数和最小公倍数反求自然数</h3>
+<p><strong>题目：</strong>两个自然数的最大公因数是8，最小公倍数是120，其中一个自然数是24，求另一个自然数。</p>
+<div class="answer"><strong>答案：</strong>40</div>
+
+<h3>题型6：正方形拼成长方形的公倍数问题</h3>
+<p><strong>题目：</strong>用若干个长6 cm、宽4 cm的相同长方形拼成一个正方形。正方形的边长最小是多少厘米？</p>
+<div class="answer"><strong>答案：</strong>12 cm</div>
+
+<a class="detail" href="2.7_最大公因数与最小公倍数的应用问题_常考题详细解题步骤.html">查看以上常考题的详细解题步骤 →</a>
+</section>
+
+<section id="s6"><h2>6. 一句话总结</h2>
+<div class="summary">最大公因数解决“共同整除且要求最大”的问题，最小公倍数解决“共同倍数且要求最小”的问题；遇到余数和实际情境时，先把题意转化成因数或倍数关系再计算。</div>
+</section>
+
+<section id="s7"><h2>7. 快速自测答案与解析</h2>
+<h3>1. 把几根不同长度的绳子剪成同样长且尽可能长的小段，没有剩余，通常要用最大公因数。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：每段长度要同时整除各根绳子的长度，并且要求最大。</div>
+<h3>2. 两件事情分别每隔8分钟和12分钟发生一次，同时开始后求最早再次同时发生的时间，通常要用最小公倍数。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：再次同时发生的时间是两个周期的共同倍数，并要求最小。</div>
+<h3>3. 一个自然数除203余3，除308余8，要研究这个除数，可以先研究200和300的公因数。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：分别减去余数后得到200和300，所求除数必须同时整除它们。</div>
+<h3>4. 一个数除以6、8、10都余2，可以先把这个数减去2，再研究6、8、10的公倍数。（　　）</h3>
+<div class="answer"><strong>答案：正确</strong><br>解析：减去共同余数2后，所得数应同时是6、8、10的倍数。</div>
+<h3>5. 应用题中只要出现“最大”两个字，就一定求最大公因数。（　　）</h3>
+<div class="answer"><strong>答案：错误</strong><br>解析：不能只看关键词，要判断所求数量究竟是共同因数还是共同倍数。</div>
+</section>
+</main></body></html>
